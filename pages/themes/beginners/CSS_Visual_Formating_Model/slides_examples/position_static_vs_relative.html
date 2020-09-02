@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Static vs Relative</title>
+    <style type="text/css">
+        /* eye-friendly CSS */
+        .left{
+            float: left;
+            width: 50vw;
+            box-sizing: border-box;
+            border-right: 1px dotted #999;
+        }
+        .right{
+            float: right;
+        }
+        .wrap .block1, .wrap .block2, .wrap .block3{
+            width: 200px;
+            height: 200px;
+            border:  5px solid #333;
+        }
+        .wrap>.block1{
+            background: #FFAAAA;
+        }
+        .wrap>.block2{
+            background: #AAFFAA;
+        }
+        .wrap>.block3{
+            background: #AAAAFF;
+        }
+        /* real CSS */
+        .static >.block2{
+            /* position: static is default */
+            top: 50px; left: 50px;
+        }
+        .relative >.block2{
+            position: relative;
+            top: 50px; left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="static wrap  left">
+        <h2>Блок 2 е позициониран статично (дефолт)</h2>
+        <div class="block1">First block</div>
+        <div class="block2">Second block</div>
+        <div class="block3">Third block</div>
+    </div>
+    <div class="relative wrap right">
+        <h2>Блок 2 е позициониран релативно.</h2>
+        <div class="block1">First block</div>
+        <div class="block2">Second block</div>
+        <div class="block3">Third block</div>
+    </div>
+
+</body>
+</html>
