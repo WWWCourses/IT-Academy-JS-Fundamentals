@@ -10,14 +10,7 @@
 	<!-- css & themes include -->
 	<link rel="stylesheet" href="../../../lib/reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="../../../outfit/css/themes/light.css" id="theme">
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement( 'link' );
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../lib/reveal.js/dist/print/pdf.css' : '../../../lib/reveal.js/dist/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
+
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
 	<![endif]-->
@@ -289,7 +282,7 @@
 	<section><h3>В отделен, js файл</h3>
 		<p>Включваме външния .js файл отново чрез елемента  <code><b>script</b></code>, но задължително добавяме и <code><b>src</b></code> атрибут, в който указваме пътя до файла!</p>
 		<pre style="width: 110%; margin: 0 auto;font-size:.55em;"><code rel="HTML" class="html">
-			<script type="text/javascript" src="myFirstScript.js"></script>
+			&lt;script type=&quot;text/javascript&quot; src=&quot;myFirstScript.js&quot;&gt;&lt;/script&gt;
 		</code></pre>
 	</section>
 	<section>
