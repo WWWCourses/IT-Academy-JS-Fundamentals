@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS_Animations_and_Visual_Effects</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../../outfit/css/themes/light.css" id="theme">
+
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="../../../outfit/css/reveal.js.css">
+    <link rel="stylesheet" type="text/css" href="../../../outfit/css/custom_hljs.css">
+    <!-- CSS for slides examples -->
+    <link rel="stylesheet" type="text/css" href="slides_examples/css/shadows.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+			<a class="home_link" href="../../../pages/agenda/beginners.html#CSS_Animations_and_Visual_Effects" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>CSS Animations and Visual Effects</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../outfit/images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h2>Анимиране на елементи чрез CSS3</h2>
+    <section><h3>Какво представлява анимацията?</h3>
+        <dl class="fa">
+            <dt>Промяната на определени свойства, при прехода на елемент от състояние А в състояние Б, се извършва <span>плавно</span> - постепенно във времето</dt>
+            <p data-height="400" data-theme-id="20230" data-slug-hash="Pbxajb" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="TransitionExample-GrowingBall" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/Pbxajb/">TransitionExample-Growingball</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        </dl>
+    </section>
+    <section><h3>Анимация чрез CSS3</h3>
+        <dl class="fa">
+            <dt>Използват се </dt>
+            <dd>CSS3 Transition Properties</dd>
+            <dd>CSS3 Animation Properties</dd>
+        </dl>
+    </section>
+</section>
+
+<section id="Transition"><h2>CSS3 Transition Properties</h2>
+    <section>
+        <h4>Полезни четива</h4>
+        <dl class="fa">
+            <dt><a href="http://www.w3schools.com/css/css3_transitions.asp">CSS3 Transitions (w3schools)</a></dt>
+            <dt><a href="https://www.kirupa.com/html5/all_about_css_transitions.htm">All About CSS Transitions</a> by <a href="https://www.kirupa.com/">kirupa</a></dt>
+        </dl>
+    </section>
+    <section><h3>Drop-down menu with transition</h3>
+        <iframe  scrolling='no' title='transitioned_drop-down' src='//codepen.io/webdesigncourse/embed/gLErLJ/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/gLErLJ/'>transitioned_drop-down</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section id="transitionOnHoverWithContainter"><h3>transitionOnHoverWithContainter</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="transitionOnHoverWithContainter" src="https://codepen.io/webdesigncourse/embed/MWagRxr?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/webdesigncourse/pen/MWagRxr'>transitionOnHoverWithContainter</a> by Iva Popova
+            (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+          </iframe>
+    </section>
+</section>
+
+<section id="Animation"><h2>CSS3 Animation Properties</h2>
+    <section><h3>How animation works</h3>
+        <a href="images/animationKeyframs.png"><img src="images/animationKeyframs.png" alt=""></a>
+    </section>
+    <section><h3></h3>
+        <iframe scrolling='no' title='CSS Animation Intro' src='//codepen.io/webdesigncourse/embed/aPprPx/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/aPprPx/'>CSS Animation Intro</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt><a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animations</a> explained @w3schools</dt>
+            <dt><a href="https://www.w3schools.com/csSref/css3_pr_animation.asp">Animation property</a> @w3schools</dt>
+        </dl>
+    </section>
+    <section><h3>Multiple animations demo</h3>
+        <iframe scrolling='no' title='Multiple Animations Demo' src='//codepen.io/webdesigncourse/embed/REKzVV/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/REKzVV/'>Multiple Animations Demo</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+    </section>
+    <section><h3></h3>
+        <p><a href="http://codepen.io/cassidoo/pen/NbOzKg">CSS Fat Cat</a> by <a href="https://codepen.io/cassidoo/">Cassidy Williams</a></p>
+        <iframe height='300' scrolling='no' title='CSS Fat Cat' src='//codepen.io/cassidoo/embed/NbOzKg/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/cassidoo/pen/NbOzKg/'>CSS Fat Cat</a> by Cassidy Williams (<a href='https://codepen.io/cassidoo'>@cassidoo</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Разлики между Transition и Animation</h2>
+    <section><h3>Механизъм на задействане (triggering)</h3>
+        <dl class="fa">
+            <dt>Транзишън ефекта се задейства едва когато се промени съответното свойство.</dt>
+            <dt>Анимацията се задейства в момента в който е дефинирана. </dt>
+        </dl>
+    </section>
+    <section><h3>Междинни точки при прехода</h3>
+        <dl class="fa">
+            <dt>При transition браузърът сам определя как да разпредели промяната в зададения интервал.</dt>
+            <dt>При анимацията ние можем да определим как да протича промяната - т.е. да зададем междини точки и да укажем какво и как да се променя (<a href="http://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">@keyframes</a>)</dt>
+        </dl>
+    </section>
+    <section><h3>Повторяемост на анимацията (Loop)</h3>
+        <dl class="fa">
+            <dt>Transition свойството не е създадено за да поддържа повтаряемост на промяната.</dt>
+            <dt>С CSS3 Animation можем лесно да зададем такава цикличност (<a href="http://www.w3schools.com/cssref/css3_pr_animation-iteration-count.asp">animation-iteration-count </a>)</dt>
+        </dl>
+    </section>
+</section>
+
+<section class="disclaimer" data-background="../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../lib/reveal.js/js/reveal.js"></script>
+		<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

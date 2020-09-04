@@ -272,12 +272,14 @@ a.home_link{
     /*border: 1px solid red;*/
 }
 .copyright>.company img{
+    display: inline;
+    height: 4em;
     margin: 0;
-    background: none;
+    padding: 1em;
+    background: #FFF;
     vertical-align: middle;
     border: none;
     border-radius: 10%;
-    padding: 1em;
     box-shadow: none;
 }
 section.copyright>.author{
@@ -290,7 +292,9 @@ section.copyright>.author a{
   vertical-align: middle;
 }
 section.copyright>.author img{
+  display: inline-block;
   margin: 0;
+  height: .9em;
 }
 
 section.copyright .LI-profile-badge{
