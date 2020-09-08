@@ -282,6 +282,945 @@
         </dl>
     </section>
 </section>
+
+
+<section data-min="50"><h1>Елементи за структуриране на текст</h1></section>
+<section><h2>Параграфи (paragraphs)</h2>
+    <section><h3>HTML елемент: <span class="keyword">P</span></h3>
+        <dl class="fa">
+            <dt>Употреба: когато искаме да представим съдържание, отделено в параграф.</dt>
+            <dt>Атрибути: няма задължителни. В HTML5 не се допуска използването на атрибута <span class="keyword">align</span>. Допустими са единствено <a href="http://www.w3schools.com/tags/ref_standardattributes.asp">глобалните HTML атрибути</a>.</dt>
+            <dt class="note fs-small">Браузърите слагат определено разстояние между параграфите, но това лесно можем да променим със CSS.</dt>
+        </dl>
+        <pre><code rel="HTML">
+            <p>Текст в параграф 1</p>
+            <p>Текст в параграф 2</p>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <p>Текст в параграф 1</p>
+            <p>Текст в параграф 2</p>
+        </div>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_p.asp">w3schools: HTML p Tag</a></dt>
+        </dl>
+    </section>
+</section>
+<section><h2>Нов ред (new line)</h2>
+    <section><h3>HTML елемент: <span class="keyword">BR</span></h3>
+        <dl class="fa">
+            <dt>Независимо колко спейса и нови редове поставяме в кода, браузърите изобразяват текста на един ред, докато има място на реда (<span class="note fs-small">естествено, и това можем да регулираме със CSS</span>).</dt>
+            <dt>Ако желаем браузъра да постави нов ред - то използваме елемента <span class="keyword">BR</span>. Той няма съдържание и се състои само от отварящия таг: <span class="keyword"><br></span></dt>
+            <pre><code rel="HTML">
+                <p>Първи ред.<br>Втори ред.</p>
+            </code></pre>
+            <div class="results_h" rel="РЕЗУЛТАТ">
+                <p>Първи ред.<br>Втори ред.</p>
+            </div>
+        </dl>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_br.asp">w3schools: HTML br Tag</a></dt>
+        </dl>
+    </section>
+</section>
+<section><h2>Преформатиран текст (preformated text)</h2>
+    <section><h3>HTML елемент: <span class="keyword">PRE</span></h3>
+        <dl class="fa">
+            <dt>Текстът в елемент <span class="keyword">PRE</span> се изобразява буквално, както е въведен в кода. Т.е. запазват се въведените спейсове и символи за нов ред.</dt>
+            <dt>Обикновено се изобразява със <a href="https://en.wikipedia.org/wiki/Monospaced_font">fixed-width</a> шрифт.</dt>
+        </dl>
+        <pre><code rel="HTML">
+            <pre>
+
+                Този     текст    ще   се
+                        представи
+
+                          така,
+                както е въведен в кода.
+
+            </pre>
+        </code></pre>
+        <p class="note fs-small">Изпробвайте и вижте сами резултата от горния примерен код!</p>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_pre.asp">w3schools: HTML pre Tag</a></dt>
+        </dl>
+    </section>
+</section>
+<section><h2>Хоризонтална черта (horizontal line)</h2>
+    <section><h3>HTML елемент: <span class="keyword">HR</span></h3>
+        <dl class="fa">
+            <dt>В HTML5 използваме хоризонтална черта за да отделим съдържанието <span class="note">тематично</span>.</dt>
+            <dt>Атрибути: всички специфични за <span class="note">HR</span> атрибути са свързани с оформлението, и не се препоръчва да се използват в HTML5.</dt>
+        </dl>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_hr.asp">w3schools: HTML hr Tag</a></dt>
+        </dl>
+    </section>
+</section>
+<section><h2>Заглавия (headings)</h2>
+    <section><h3>HTML елементи: <span class="keyword">H1</span> - <span class="keyword">H6</span></h3>
+        <dl class="fa">
+            <dt>Използват се за маркиране на заглавия в документа.</dt>
+            <dt><span class="note">SEO</span>: Имат голяма тежест при структурирането и индексирането на страницата от търсещите системи. В тях е добре да участват ключовите думи за страницата.</dt>
+            <dt><span class="note">UX: </span>Подпомагат потребителя да навигира и възприема бързо съдържанието на страницата.</dt>
+        </dl>
+    </section>
+    <section>
+        <p>HTML елементи H1 - H6</p>
+        <pre><code rel="HTML">
+            <h1>Заглавие 1</h1>
+            <h2>Заглавие 2</h2>
+            <h3>Заглавие 3</h3>
+            <h4>Заглавие 4</h4>
+            <h5>Заглавие 5</h5>
+            <h6>Заглавие 6</h6>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <h1>Заглавие 1</h1>
+            <h2>Заглавие 2</h2>
+            <h3>Заглавие 3</h3>
+            <h4>Заглавие 4</h4>
+            <h5>Заглавие 5</h5>
+            <h6>Заглавие 6</h6>
+        </div>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_hn.asp">w3schools: HTML h1-h6 Tags</a></dt>
+        </dl>
+    </section>
+</section>
+<section><h2>Елементи за акцентиране на текст</h2>
+    <section><h3>HTML елементи: <span class="keyword">I</span>,<span class="keyword">EM</span></h3>
+        <dl class="fa" style="font-size:.8em">
+            <dt><span class="keyword">i: </span> - маркира текст, който да се представи чрез курсив.
+                <blockquote>"The i element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text"<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-i-element">The <code>i</code> element</a></cite>
+                </blockquote>
+            </dt>
+            <dt><span class="keyword">em</span> - за текст, който носи семантично ударение.
+            <blockquote>"The em element <a href="https://www.w3.org/TR/html5/dom.html#represents">represents</a> stress emphasis of its contents."<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-em-element">The <code>em</code> element</a></cite>
+                </blockquote>
+            </dt>
+        </dl>
+    </section>
+    <section><h3>HTML елементи: <span class="keyword">B</span>,<span class="keyword">STRONG</span></h3>
+        <dl class="fa" style="font-size:.8em">
+            <dt><span class="keyword">b</span> - текст, който да се представи почернен.
+                <blockquote>"The b element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede"<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-b-element">The <code>b</code> element</a></cite>
+                </blockquote>
+            </dt>
+            <dt><span class="keyword">strong</span> -  за текст, който носи важен смисъл.
+                <blockquote>"The strong element represents strong importance, seriousness, or urgency for its contents."<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element">The <code>strong</code> element</a></cite>
+                </blockquote>
+            </dt>
+        </dl>
+    </section>
+    <section><h3>Пример</h3>
+        <pre><code rel="HTML">
+            <p>При закупуване на пералня модел <b>XYZ0101</b> клиентът получава <em>5% <strong>отстъпка</strong></em></p>
+
+            <p>"<strong>Внимание! </strong><strong>Внимание! </strong><strong>Внимание! </strong>Всички роботи да се придвижат към балната зала". <i>Колко хубаво би било да бъда сега на плажа</i> - помисли си той, докато тътреше колелата си по пода.</p>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <p>При закупуване на пералня модел <b>XYZ0101</b> клиентът получава <em>5% <strong>отстъпка</strong></em></p>
+
+            <p>"<strong>Внимание! </strong><strong>Внимание! </strong><strong>Внимание! </strong>Всички роботи да се придвижат към балната зала". <i>Колко хубаво би било да бъда сега на плажа</i> - помисли си той, докато тътреше колелата си по пода.</p>
+        </div>
+    </section>
+</section>
+<section><h2>Елементи за форматиране на текст.</h2>
+    <section><h3>HTMl елементи <span class="keyword">small</span> и <span class="keyword">mark</span></h3>
+        <dl class="fa">
+            <dt>W3schools: <a href="http://www.w3schools.com/tags/tag_small.asp">HTML <code>small</code> Tag</a></dt>
+            <dt>W3schools: <a href="http://www.w3schools.com/tags/tag_mark.asp">HTML <code>mark</code> Tag</a></dt>
+        </dl>
+        <pre><code rel="HTML">
+            <small>Small text</small>
+            <mark>Marked text</mark>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <p>
+                <small>Small text</small>
+                <mark>Marked text</mark>
+            </p>
+        </div>
+    </section>
+    <section><h3>HTMl елементи <span class="keyword">del</span> и <span class="keyword">ins</span></h3>
+        <dl class="fa">
+            <dt>W3schools: <a href="http://www.w3schools.com/tags/tag_del.asp">HTML <code>del</code> Tag</a></dt>
+            <dt>W3schools: <a href="http://www.w3schools.com/tags/tag_ins.asp">HTML <code>ins</code> Tag</a></dt>
+        </dl>
+        <pre><code rel="HTML">
+            <del>deleted text</del>
+            <ins>inserted text</ins>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <p>
+                <del>deleted text</del>
+                <ins>inserted text</ins>
+            </p>
+        </div>
+    </section>
+    <section><h3>HTMl елементи <span class="keyword">sub</span> и <span class="keyword">sup</span></h3>
+        <dl class="fa">
+            <dt>W3schools: <a href="http://www.w3schools.com/tags/tag_del.asp">HTML <code>sub</code> Tag</a></dt>
+            <dt>W3schools: <a href="http://www.w3schools.com/tags/tag_ins.asp">HTML <code>sup</code> Tag</a></dt>
+        </dl>
+        <pre><code rel="HTML">
+            <sub>subscripted text</sub>
+            <span>normal text</span>
+            <sup>supscripted text</sup>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <p>
+                <sub>subscripted text</sub>
+                <span>normal text</span>
+                <sup>supscripted text</sup>
+            </p>
+        </div>
+    </section>
+    <section>
+        <p>Други</p>
+        <pre><code rel="HTML">
+            <code>A piece of computer code</code><br>
+            <samp>Sample output from a computer program</samp><br>
+            <kbd>Keyboard input</kbd><br>
+            <var>Variable</var><br>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <code>A piece of computer code</code><br>
+            <samp>Sample output from a computer program</samp><br>
+            <kbd>Keyboard input</kbd><br>
+            <var>Variable</var><br>
+        </div>
+    </section>
+</section>
+<section id="hw"><h2>Задачи за упражнения</h2>
+</section>
+<section><h3>Folder Structure</h3>
+    <p>Работете в папка HW със следната структура:</p>
+    <pre><code rel="JS" class="js">
+        HW/
+        ├── images
+        │   └── IvaPopova.png
+        └── pages
+            ├── CV.html
+            └── personalPage.html
+    </code></pre>
+    <p class="note">Изпратете архива на папката по имейл, като го префексирате с вашите инициали. Например, аз бих именувала архива като <code style="font-style: normal;"><b>iepHW.zip</b></code></p>
+</section>
+<section>
+    <section><h3>Лична страница</h3>
+        <p>Да се състави <a href="https://validator.w3.org/#validate_by_input">валидна</a> HTML5 лична страница.</p>
+        <p>Целта е да <span class="note">структурирате правилно съдържанието</span>, като подберете правилните HTML елементи.</p>
+        <p><span class="note">KAK</span> ще изглежда вашата страница, няма значение, за сега.</p>
+        <p>Съдържанието е изцяло според вашия вкус и идеи, но то трябва да съдържа минимум следните секции:</p>
+    </section>
+    <section><h3>Лична страница - примерно съдържание</h3>
+        <dl class="fa">
+            <dt>за мен</dt>
+                <div class="fs-small">тук бихте могли да сложите отделни под-секции, например:</div class="fs-small">
+                <dd>образование</dd>
+                <dd>трудов опит</dd>
+                <dd>интереси/хоби</dd>
+                <dd>домашни любимци </dd>
+                <dd>и каквото още ви хрумне</dd>
+            <dt>какво очаквам от курса по HTML/CSS/JS</dt>
+            <dt>какъв курсов проект бих желал/а да мога да реализирам до края на курса.</dt>
+            <dt>защо записах курса към ProgressBG (или: откъде разбрах за курса)</dt>
+        </dl>
+    </section>
+</section>
+<section id="hwCV">
+    <section><h3>CV - task</h3>
+        <p>Да се състави <a href="https://validator.w3.org/#validate_by_input">валидна</a> HTML5 страница с ваше CV.</p>
+        <p>Целта е да <span class="note">структурирате правилно съдържанието</span>, като подберете правилните HTML елементи.</p>
+        <p><span class="note">KAK</span> ще изглежда вашето CV, няма значение, за сега.</p>
+    </section>
+    <section><h3>CV - example</h3>
+        <p>Примерно CV - ако нямате идея за ваше CV, за момента използвайте като пример съдържанието: <a href="homework/CV/CV-Template/IvanIvanovCV.html" title="IvanIvanovCV">Ivan Ivanov CV</a></p>
+        <p></p>
+    </section>
+</section>
+
+
+<section data-min="50"><h1>Вмъкване на хиперлинкове, изображения</h1></section>
+<section><h2>Вмъкване на изображения</h2>
+    <section><h3>HTML елемент <code>img</code></h3>
+        <dl class="fa">
+            <dt>Употреба: когато искаме да вмъкнем изображение, което <span class="note">да бъде част от съдържанието на страницата</span>.</dt>
+            <dd>Например: снимка на продукт, лого и пр.</dd>
+            <dt class="note">Не използвайте <code>img</code> елемент, когато желате изображението да бъде фон - това се прави изцяло със CSS!</dt>
+        </dl>
+    </section>
+    <section><h3>HTML елемент <code>img</code></h3>
+        <pre><code rel="HTML" class="html">
+            <img src="images/redApples.jpg" alt="Fresh Red Apples">
+        </code></pre>
+        <dl class="fa">
+            <dt>Елемента няма съдържание!</dt>
+            <dt>Има два задължителни атрибута:</dt>
+            <dd><span class="keyword">src</span> - <i>URL</i> на файлът, от който искате да се зареди изображението.</dd>
+            <dd><span class="keyword">alt</span> - кратко описание (2-3 думи) на съдържанието на изображението.</dd>
+        </dl>
+    </section>
+    <section><h3>Атрибута <code>src</code></h3>
+        <dl class="fa">
+            <dt>Като стойност задаваме URL - за предпочитане е да бъде <a href="https://www.w3schools.com/html/html_filepaths.asp">релативен път</a> до файла с изображението.</dt>
+            <dt>Но ако вашия файл е разположен на друг сървър - задавате абсолютното URL.</dt>
+        </dl>
+    </section>
+    <section><h3 class="advanced">Какво е Hotlinking</h3>
+        <dl class="fa">
+            <dt class="note">Не използвайте URL към изображения които се намират на чужд сървър (hotlinking) тъй като това натоварва въпросния сървър.</dt>
+            <dt>Повечето сървъри забраняват това автоматично.</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+             <!-- НЕ ПРАВЕТЕ ТОВА: -->
+             <img src="https://cdn.pixabay.com/photo/2016/07/09/12/16/apple-1506119_960_720.jpg">
+
+             <!-- A си свалете въпросното изображение на вашия сървър, ако лицензът му позволява! -->
+        </code></pre>
+    </section>
+    <section><h3>Атрибута <code>alt</code></h3>
+        <dl class="fa">
+            <dt>Атрибута alt дава алтернативно (текстово) описание на съдържанието, което представяме с изображението. Използвайте го винаги, за да бъде вашето съдържание достъпно.</dt>
+            <dt>Текстът в alt е текстът, който ще се появи до placeholder, когато изображението не може да бъде заредено</dt>
+            <dt>Текстът в alt се използва от гласовите браузъри!</dt>
+            <dt class="note">Една чудесна възможност да сложите в него ключова дума за SEO!</dt>
+        </dl>
+    </section>
+     <section><h3>Атрибути <code>width</code> и <code>height</code></h3>
+        <dl class="fa">
+            <dt>HTML5 поддържа атрибутите <code>width</code> и <code>height</code>, чрез които указваме колко пиксела да заема даденото изображение.</dt>
+            <dt class="note">Това може да направим и със CSS, което е предпочитания вариант, тъй като дава много повече възможности!</dt>
+            <dt>За да не променяме оригиналните пропорции, трябва да зададем <span class="note">само width или само height</span>. Браузърът автоматично ще изчисли другото измерение.</dt>
+        </dl>
+    </section>
+    <section><h3>Анимирани (gif) изображения?</h3>
+        <dl class="fa">
+            <dt>Съвременните браузъри поддържат .gif файлове!</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+            <img src="images/funny_bear_by_belthazor1.gif">
+        </code></pre>
+        <a href="images/funny_bear_by_belthazor1.gif"><img src="images/funny_bear_by_belthazor1.gif"></a>
+        <p style="font-size: 0.6em"><a href="http://fav.me/d4vjbi9">gif by Belthazor1@deviantart.com</a></p>
+    </section>
+    <section><h3>HTML елемент <code>img</code> - полезни ресурси</h3>
+        <a href="../../../../pages/readings/beginners/UsefulResources.html#Images">Сайтове, предлагащи безплатни за използване изображения</a>
+        <a href=""></a>
+    </section>
+    <section><h3>Повече за HTML images</h3>
+        <dl class="fa">
+            <dt>Oбщо описание за употребата на изображения в HTML: <a href="https://www.w3schools.com/html/html_images.asp">HTML Images@w3schools</a></dt>
+            <dt>Сбит справочник за HTML img елемента: <a href="https://www.w3schools.com/tags/tag_img.asp">HTML &lt;img&gt; Tag@w3schools</a></dt>
+
+        </dl>
+    </section>
+</section>
+<section><h2>Хипервръзки</h2>
+    <section><h3>HTML елемент <code>a</code> (anchor)</h3>
+        <pre><code rel="Syntax" class="shell" data-noescape>
+            &lt;a href=&quot;<i>URL</i>&quot;&gt;<i>content</i>&lt;/a&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt><i>URL</i> – идентификатор на ресурс в WWW или на локален файл. Задължителен атрибут!</dt>
+            <dt><i>content</i> – това, което ще се изобрази в страницата като линк. Може да бъде текст, изображение или друг HTML елемент.</dt>
+            <dd class="note">Ако пропуснете <i>content</i>, то браузърът няма да изобрази линка!</dd>
+            <dt>Браузърите слагат дефоултен CSS за посетени/непосетени линкове. Детайлното им оформление ще разгледаме в частта за CSS.</dt>
+        </dl>
+    </section>
+    <section><h3>Атрибут <code>target</code></h3>
+        <pre><code rel="Syntax" class="shell" data-noescape>
+            &lt;a href=&quot;<i>URL</i>&quot; target="_blank"&gt;<i>content</i>&lt;/a&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt>Атрибута <code class="note">target</code> задава <span class="note">къде</span> да се отвори ресурсът към който сочи линка.</dt>
+            <dt>Стойности:</dt>
+            <dd><code class="note">_self</code>: това е дефоултната стойност. Ресурсът ще се отвори в текущия таб/прозорец.</dd>
+            <dd><code class="note">_blank</code>: ресурсът ще се отвори в нов таб/прозрец на браузера</dd>
+            <dd><code class="note"><i>frame_id</i></code>: ресурсът ще се отвори в зададения фрейм. Ще разгледаме по-подробно в темата за iframes.</dd>
+        </dl>
+    </section>
+    <section><h3>Атрибут <code>title</code></h3>
+        <pre><code rel="Syntax" class="shell" data-noescape>
+            &lt;a href=&quot;<i>URL</i>&quot; title="more info"&gt;<i>content</i>&lt;/a&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt><code>title</code> е <a href="https://www.w3schools.com/tags/ref_standardattributes.asp">глобален атрибут, който често се употребява при хипер-линкове.</a></dt>
+            <dt>В него можем да зададем допълнителна информация, която ще се изобрази като <a href="https://en.wikipedia.org/wiki/Tooltip">tooltip</a>, когато мишката е върху елемента. </dt>
+            <dt>Позиционирайте мишката върху долния линк, и вижте какво прави атрибута <code>title</code></dt>
+            <dd><a href="https://www.google.bg/search?ei=P5muWrLoEMGUmwXaho-AAQ&q=tooltip&oq=tooltip&gs_l=psy-ab.3..0i67k1l4j0i203k1l4j0l2.3960.4583.0.4917.5.5.0.0.0.0.108.468.3j2.5.0....0...1.1.64.psy-ab..0.5.467....0.Dp9GKCA_kVs" title="more info">what is tooltip</a></dd>
+        </dl>
+    </section>
+    <section><h3>SEO и <code>title</code> атрибута</h3>
+        <pre><code rel="Syntax" class="shell">
+            &lt;a href=&quot;images/redApples.jpg&quot; title=&quot;buy red apples&quot;&gt;
+                &lt;img src=&quot;images/redApples.jpg&quot; alt=&quot;red apples&quot;&gt;
+            &lt;/a&gt;
+        </code></pre>
+        <dt><span class="note">SEO</span>: когато в линка имаме изображение към продукт от нашия сайт, атрибута <code>title</code> е прекрасна възможност да сложим ключовата дума и тук.</dt>
+    </section>
+    <section><h3>Линк към bookmark в страницата</h3>
+        <dl class="fa">
+            <dt>При дълги документи можем да маркираме отделни секции (bookmarks) в страницата ни, и да сложим линкове, които сочат към тях.</dt>
+            <dd>Използва се, когато слагаме съдържание на нашата страница</dd>
+            <dd>Линк, който да навигира страницата в началото и пр.</dd>
+            <dd>Когато искаме външен линк, да отвори страницата ни в определента секция</dd>
+        </dl>
+    </section>
+    <section><h3>Линк към bookmark в страницата - как?</h3>
+        <dl class="fa">
+            <dt>За целта са необходими 2 HTML елемента:</dt>
+            <dd>Единият ще маркира секцията (bookmark), мястото в документа към което искаме да направим прехода. Това се осъществява като добавим <span class="note">атрибут id (или name)</span> към съответния елемент.</dd>
+            <dd>Вторият елемент ще бъде самия линк (<span class="note">a елемент</span>), които ще ни отведе до маркираното място в страницата.</dd>
+        </dl>
+    </section>
+    <section><h3>Линк към bookmark в страницата - как?</h3>
+        <pre><code rel="HTML" class="html">
+            <!-- линк към секция с id="Chapter 4" в текущата страница-->
+            <a href="#Chapter4">Към Chapter 4</a>
+
+            <!-- code, code, code -->
+
+            <!-- маркираме този елемент като секция с id="Chapter4" -->
+            <h2 id="Chapter4">Chapter 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </code></pre>
+        <p>Разгледайте внимателно примера на следващата страница, в който участва дадения фрагмент.</p>
+    </section>
+    <section><h3>Линк към bookmark в страницата - приемр</h3>
+        <p>Кликнете "<a href="https://codepen.io/webdesigncourse/pen/LdbRab">edit on Codepen</a>" за да разгледате примера директно в codepen.</p>
+        <iframe height='300' scrolling='no' title='Link to bookmark in the page' src='//codepen.io/webdesigncourse/embed/LdbRab/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/LdbRab/'>Link to bookmark in the page</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Повече за HTML hyperlinks</h3>
+        <dl class="fa">
+            <dt>Общо описание за употребата на хипер-линкове в HTML: <a href="https://www.w3schools.com/html/html_links.asp">HTML Links@w3schools</a></dt>
+            <dt>Сбит справочник за HTML a елемента: <a href="https://www.w3schools.com/tags/tag_a.asp">HTML &lt;a&gt; Tag@w3schools</a></dt>
+
+        </dl>
+    </section>
+</section>
+<section id="hw"><h2>Задачи за упражнения</h2>
+</section>
+<section><h2>Подобрение на Personal Page и CV</h2>
+    <section><h3>Структура на проекта</h3>
+        <p>Работете в папка HW със следната структура:</p>
+        <pre><code rel="JS" class="js">
+            hw/
+            ├── images/
+            │   ├── CV/
+            │   │   └── IvaPopova.png
+            │   └── personalPage/
+            │       ├── my_cat1.png
+            │       ├── my_cat2.png
+            │       ├── my_cat3.png
+            │       ├── my_dog1.png
+            │       └── my_dog2.png
+            ├── pages/
+            │    ├── CV.html
+            │    └── personalPage.html
+            ├── index.html
+        </code></pre>
+        <p class="note">Имената на файловете са примерни. Единствено, трябва да изпозлвате <code>index.html</code>, който да е в главната папка на проекта (<strong>hw/</strong>).</p>
+    </section>
+    <section><h3>CV update (CV.html)</h3>
+        <dl class="fa">
+            <dt>Добавете  ваша снимка в CV-то си.</dt>
+            <dt>Включите линкове към сайтовете на компаниите за които сте работили и университетите в който сте учили.</dt>
+            <dt class="note">Валидирайте CV.html!</dt>
+        </dl>
+    </section>
+    <section><h3>Personal Page update (personalPage.html)</h3>
+        <dl class="fa">
+            <dt>Добавете секция "<i>Домашни Любимци</i>" в която поместете няколко (<strong>поне 5</strong>) снимки на любими ваши животни. Използвайте width/height за да изглеждат снимките по-добре. Бихте могли да добавите и линкове към сайтове свързани с тези животни.</dt>
+            <dt>Разбира се, вместо "<i>Домашни Любимци</i>", можете да използвате каквато и да е друга тематика (книги, държави, планини и пр.), но изискванията за изображения и линкове остават.</dt>
+            <dt class="note">Ако ще използвате изображения от Интернет, уверете се, че те са с необходимите права за ползване.</dt>
+            <dt class="note">Валидирайте personalPage.html</dt>
+        </dl>
+    </section>
+    <section><h3>Създаване на главна (home) страница на проекта</h3>
+        <dl class="fa">
+            <dt>Уверете се, че в главната папка (hw/) сте създали файла <code class="note">index.html</code></dt>
+            <dt>Сложете заглавие на страницата. Например: "Списък със реализирани от мен задачи"</dt>
+            <dt>В него добавете линкове към:</dt>
+            <dd>CV.html</dd>
+            <dd>personalPage.html</dd>
+            <dt class="note">Валидирайте index.html</dt>
+        </dl>
+    </section>
+    <section><h3>Изпращане на задачите</h3>
+        <dl class="fa">
+            <dt>Архивирайте <span class="note">цялата папка <strong>hw</strong></span></dt>
+            <dt>Преименувайте архива, като го префексирате с вашите инициали. Например, аз бих именувала архива като <code style="font-style: normal;"><b>iepHW.zip</b></code></dt>
+            <dt>Изпратете архива на папката по имейл, като го прикачите като отговор на изпратения от мен мейл с тема: "HW: dayN"</dt>
+        </dl>
+    </section>
+</section>
+
+
+<section data-min="50"><h1>Елементи за списъци и таблици</h1></section>
+<section><h2>Неподреден списък (Unordered List)</h2>
+	<section><h3>Семантика:</h3>
+		<dl class="fa">
+			<dt>Представя списък от елементи, при който редът на елементите <span class="note">не е от значение</span>. Т.е. ако разменим местата на елементите то смисълът на документа няма да се промени!</dt>
+		</dl>
+	</section>
+	<section><h3>Елемент: <code><strong>UL</strong></code></h3>
+		<pre><code rel="HTML">
+			<ul>
+				<li>2 бр. яйца</li>
+				<li>1 ч.ч. прясно мляко или вода</li>
+				<li>1 ч.ч. брашно тип 500</li>
+				<li>1 с.л. краве масло</li>
+				<li>Щипка сол, щипка захар</li>
+			</ul>
+		</code></pre><br>
+		<ul class="fa">
+			<li class="note">В елемент <code><strong>UL</strong></code> може да имаме единствено <code><strong>LI</strong></code> елементи!</li>
+			<li class="note">В <code><strong>LI</strong></code> е позволено да вмъкваме всякакви елементи!</li>
+			<li>Форматирането на неподредения списък се извършва изцяло чрез CSS!</li>
+		</ul>
+	</section>
+</section>
+<section><h2>Подреден списък (Ordered List)</h2>
+	<section><h3>Семантика:</h3>
+		<dl class="fa">
+			<dt>Представя списък, чиито елементите са подредени, и тази подредба <span class="note">е от съществено значение</span>. Промяната на реда на елементите на такъв списък би довела до промяна в смисъла на документа.</dt>
+		</dl>
+	</section>
+	<section>
+		<h4>Елемент: <code><strong>OL</strong></code></h4>
+		<pre><code rel="HTML">
+			<ol>
+				<li>Яйцата се разбиват, докато се получи еднородна смес.</li>
+				<li>Добавя се млякото, щипка сол и щипка захар.</li>
+				<li>На малки порции се добавя пресятото брашно.</li>
+				<li>Разбъркваме до получаването на гъста смес, с консистенция подобна на боза.</li>
+				<li>Намазваме с масло предварително нагрятия тиган и поставяме черпак от сместа.</li>
+				<li>След няколко минути обръщаме палачинката.</li>
+			</ol>
+		</code></pre><br>
+		<ul class="fa">
+			<li class="note">В елемент <code><strong>OL</strong></code> може да имаме единствено <code><strong>LI</strong></code> елементи!</li>
+			<li class="note">В <code><strong>LI</strong></code> е позволено да вмъкваме всякакви елементи!</li>
+		</ul>
+	</section>
+	<section><h3>Атрибути</h3>
+		<ul class="fa">
+			<li>Можем да управляваме типа на номерирането чрез атрибутите на елемента <code>OL</code>: <a href="http://www.w3schools.com/tags/tag_ol.asp">http://www.w3schools.com/tags/tag_ol.asp</a></li>
+			<li>Както и чрез атрибута <code>value</code> на елемент <code>LI</code> (<strong>само в подреден списък</strong>): <a href="http://www.w3schools.com/tags/tag_li.asp">http://www.w3schools.com/tags/tag_li.asp</a>
+			</li>
+		</ul>
+	</section>
+</section>
+<section><h2>Вложени списъци (Nested Lists)</h2>
+	<section>
+		<p>Следвайки правилата описани в предходните слайдове, бихме могли да съставяме вложени списъци като в даден <code>li</code> елемент поместим цял <code>ol</code> или <code>ul</code> елемент:</p>
+		<pre><code rel="HTML">
+			<ul>
+				<li><b>Auhtor 1</b>
+					<ol>
+						<li>Book 1</li>
+						<li>Book 2</li>
+						<li>Book 3</li>
+					</ol>
+				</li>
+				<li><b>Auhtor 2</b>
+					<ol>
+						<li>Book 1</li>
+						<li>Book 2</li>
+					</ol>
+				</li>
+			</ul>
+		</code></pre>
+	</section>
+	<section><h3>Често срещана грешка</h3>
+		<p>Забележете, че "вложените" <code>ol</code> елементи <span class="note">са извън</span> родителският <code>li</code>, и са директно в <code>ul</code> елемента, което е структурна грешка:</p>
+		<pre><code rel="HTML" class="html">
+			<ul>
+				<li><b>Auhtor 1</b></li>
+				<ol>
+					<li>Book 1</li>
+					<li>Book 2</li>
+					<li>Book 3</li>
+				</ol>
+
+				<li><b>Auhtor 2</b></li>
+				<ol>
+					<li>Book 1</li>
+					<li>Book 2</li>
+				</ol>
+			</ul>
+		</code></pre>
+		<p>Тук валидаторът ще даде грешка: <span>Element ol not allowed as child of element ul in this context.</span></p>
+	</section>
+</section>
+<section><h2>Списък с дефиниции</h2>
+	<h3>Self-Learning Section</h3>
+	<a href="http://www.w3schools.com/tags/tag_dl.asp">DL element</a>
+</section>
+<section id="HW"><h2>Упражнения</h2>
+		<dl class="fa">
+			<dt><a href="homeworks/1_Ordered_and_Unordered_lists.pdf">Ordered and Unordered lists</a></dt>
+			<dt><a href="homeworks/2_Nested_lists_food.pdf">Nested lists food</a></dt>
+			<dt><a href="homeworks/3_Nested_list_music.pdf">Nested lists music</a></dt>
+		</dl>
+		<p style="font-size: 0.8em;">За всяка задача работете в отделен html файл, в папка <code>pages/</code> и сложете линк към решението във файла <code>index.html</code></p>
+</section>
+<section><h2>Таблици - въведение</h2>
+    <ul class="fa">
+        <li>Само за представяне на информация във вид на таблица!</li>
+        <li>Преди CSS2 таблиците се използваха за оформление на страницата. Което водеше до маркъп код, многократно надвишаваш самото съдържание на страницата! (пример: <a href="https://web.archive.org/web/20091228021514/http://www.store.bg/?">Wayback Machine: store.bg</a>)</li>
+        <li>След CSS2 е абсолютно недопустимо е да се използват таблици за тези цели!</li>
+        <li>В CSS2.1 се въвеждат множество свойства, чрез който можем да изградим табличен layout, без да пренасищаме HTML съдържанието с излишен код.</li>
+    </ul>
+</section>
+<section><h2>Създаване на таблица</h2>
+    <section>
+    <p><a href="http://www.w3schools.com/html/html_tables.asp">w3schools - HTML Tables</a></p>
+    <p>Основни елементи:</p>
+    <ul>
+        <li><code><a href="http://www.w3schools.com/tags/tag_table.asp">table</a></code></li>
+        <li><code><a href="http://www.w3schools.com/tags/tag_caption.asp">caption</a></code></li>
+        <li><code><a href="http://www.w3schools.com/tags/tag_colgroup.asp">colgroup</a></code></li>
+        <li><code><a href="http://www.w3schools.com/tags/tag_tr.asp">tr</a></code></li>
+        <li><code><a href="http://www.w3schools.com/tags/tag_td.asp">td</a></code></li>
+        <li><code><a href="http://www.w3schools.com/tags/tag_th.asp">th</a></code></li>
+    </ul>
+    <p>Обърнете внимание, че почти всички атрибути на посочените елементи са забранени в HTML5!</p>
+    </section>
+    <section>
+        <p>Пример:</p>
+        <img class="norm" src="images/table_no-span.png">
+        <pre><code rel="HTML">
+            &lt;table border="1"&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Едно&lt;/td&gt;
+                    &lt;td&gt;Две&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt; Три &lt;/td&gt;
+                    &lt;td&gt; Четири &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        </code></pre>
+    </section>
+</section>
+<section><h2>Обединение на клетки в таблица</h2>
+    <section>
+        <h4>(Cells span - аналогично на 'merge' в Excel)</h4>
+    </section>
+    <section><h5>Хоризонтално (обединяване по колони)</h5>
+        <h4><a href="http://www.w3schools.com/tags/att_td_colspan.asp">td colspan attribute</a></h4>
+        <p>Пример:</p>
+        <img class="norm" src="images/table_colspan.png">
+        <pre><code rel="HTML">
+            &lt;table border="1"&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Едно&lt;/td&gt;
+                    &lt;td&gt;Две&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="2"&gt; Три и четири &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        </code></pre>
+    </section>
+    <section><h5>Вертикално (обединяване по редове)</h5>
+        <h4><a href="http://www.w3schools.com/tags/att_td_rowspan.asp">td rowspan attribute</a></h4>
+        <p>Пример:</p>
+        <img class="norm" src="images/table_rowspan.png">
+        <pre><code rel="HTML">
+            &lt;table border="1"&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Едно&lt;/td&gt;
+                    &lt;td rowspan="2"&gt;Две и четири&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt; Три &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        </code></pre>
+        <p class="note fs-small">Браузера изобразява елементите последователно, отгоре-надолу, поради това не може да имаме вертикално обединяване на клетки отдолу-нагоре.</p>
+    </section>
+</section>
+<section><h2>Задачи за упражнение</h2>
+    <section>
+        <p>За всяка задача работете в отделен html файл, в папка <code>pages/</code> и сложете линк към решението във файла <code>index.html</code></p>
+    </section>
+    <section><h3>Задача 1: Slot_Machine</h3>
+        <dl class="fa">
+        <dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира страницата показана на <a href="homeworks/Slot_Machine/Slot_Machine-result.png">фиг.1</a>.</dt>
+        <dt class="note">Забележки:</dt>
+        <dd>Подберете изображения за плодовете според вашия вкус, но следвайте тяхното подреждане в заданието.</dd>
+        <dd>Изображението на всеки плод, трябва да бъде линк към съответна статия за плода в <a href="https://www.wikipedia.org/">wikipedia</a>.</dd>
+        <dd>Списък със свободни за използване изображения/фотографии може да намерите тук: <a href="../../../../pages/readings/beginners/UsefulResources.html#Images">UsefulResources - Images</a></dd>
+        </dl>
+    </section>
+    <section><h3>Задача 2: FIFA_Table</h3>
+        <dl class="fa">
+        <dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира страницата показана на <a href="homeworks/FIFA_Table/FIFA_Table-result.png">фиг.1</a>. Обърнете внимание на клетките, които са обединени!</dt>
+        <dt class="note">Забележки:</dt>
+        <dd>За да се визуализира рамката на таблицата е използван атрибута <code>border="1"</code> на елемента <code>table</code>, който не се препоръчва да се използва в HTML5. </dd>
+        <dd>Никакво друго оформление не е приложено върху таблицата.</dd>
+        <dd>Разбира се, таблицата изглежда почти неизползваема, без подходящото оформление. Когато стигнем до уроците за CSS, ще приложим необходимия стил.</dd>
+        </dl>
+    </section>
+</section>
+
+
+<section id="forms_intro"><h1>HTML Форми</h1></section>
+<section><h2>Какво са HTML Формите?</h2>
+	<dl class="fa">
+		<dt>Основен елемент от взаимодействието на потребителя със приложението (сайта).</dt>
+		<dt>Чрез формите потребителя може да изпраща данни към сървъра. <span class="note">В този случай, се работи с повишено внимание относно сигурността на системата.</span></dt>
+		<dt>Формата може да се използва и за взаимодействие изцяло на Front-End ниво (например, калкулатор и пр.).</dt>
+		<dt>Формата се състои от множество компоненти (контроли), като текстови полета, падащи списъци, чек-боксове, бутони.</dt>
+	</dl>
+</section>
+<section><h2>Елемент form</h2>
+	<section>
+		<p>Контейнер, в който се разполагат елементите на формата</p>
+		<pre><code rel="HTML">
+			<form action="registration.py" method="POST">
+				<div>Име: <input type="text" name="uname"></div>
+				<div>Парола: <input type="password" name="pass"></div>
+				<button type="submit">Submit</button>
+			</form>
+		</code></pre>
+	</section>
+	<section><h3>Основни атрибути</h3>
+		<dl class="fa" style="font-size: .9em">
+			<dt><span class="code">action</span></dt>
+			<dd>Задава пътя до back-end програмата, която ще обработва данните на сървъра.</dd>
+			<dt><span class="code">method</span></dt>
+			<dd>Задава начина по който ще се изпратят данните. Основните HTTP методи за изпращане на данни са:
+			<ul>
+				<li><span class="keyword">get</span> - данните ще се "закачат" в самото URL; </li>
+				<li><span class="keyword">post</span> - данните се предават в тялото на съобщенето.</li>
+			</ul>
+			</dd>
+		</dl>
+		<br><br>
+		<p class="note">Когато чрез формата ще се изпращат конфиденциални данни (като парола), то винаги използвайте <code>method="post"</code></p>
+	</section>
+	<section id="form_controls_list"><h3>Допустими елементи във <code><b>form</b></code></h3>
+		<pre><code rel="" class="html" data-noescape>
+			<a href="http://www.w3schools.com/tags/tag_input.asp">input</a>       <a href="http://www.w3schools.com/tags/tag_textarea.asp">textarea</a>        <a href="http://www.w3schools.com/tags/tag_button.asp">button</a>
+
+			<a href="http://www.w3schools.com/tags/tag_option.asp">option</a>      <a href="http://www.w3schools.com/tags/tag_optgroup.asp">optgroup</a>        <a href="http://www.w3schools.com/tags/tag_select.asp">select</a>
+
+			<a href="http://www.w3schools.com/tags/tag_label.asp">label</a>       <a href="http://www.w3schools.com/tags/tag_fieldset.asp">fieldset</a>
+		</code></pre>
+	</section>
+</section>
+<section><h2>Елемент input</h2>
+	<section>
+		<p>Създава поле за въвеждане на данни от потребителя</p>
+		<p>Елемента е празен. Типът му се регулира от атрибута <a href="http://www.w3schools.com/tags/att_input_type.asp">type</a>:</p><br>
+		<div class="left half">
+			<pre><code rel="HTML">
+				Text type: <input type="text">
+				Pass type: <input type="password">
+				Checkbox: <input type="checkbox">
+				Radio: <input type="radio">
+				File: <input type="file">
+				Color: <input type="color">
+				Submit button: <input type="submit">
+				Reset button: <input type="reset">
+			</code></pre>
+		</div>
+		<div class="right half">
+			<div>Text type: <input type="text" style="vertical-align: middle;"></div>
+			<div>Pass type: <input type="password" style="vertical-align: middle;"></div>
+			<div>Checkbox: <input type="checkbox" style="vertical-align: middle; transform: scale(1.5);"></div>
+			<div>Radio: <input type="radio" style="vertical-align: middle;transform: scale(1.5);"></div>
+			<div>File: <input type="file" style="vertical-align: middle;"></div>
+			<div>Color: <input type="color" style="vertical-align: middle;"></div>
+			<div>Submit button: <input type="submit" style="vertical-align: middle;"></div>
+			<div>Reset button: <input type="reset" style="vertical-align: middle;"></div>
+		</div>
+	</section>
+	<section><h3>Основни атрибути</h3>
+		<dl class="fa">
+			<dt><a href="https://www.w3schools.com/tags/att_input_autocomplete.asp"><code class="note">autocomplete</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_autofocus.asp"><code class="note">autofocus</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_checked.asp"><code class="note">checked</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_name.asp"><code class="note">name</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_placeholder.asp"><code class="note">placeholder</code> attribute @w3schools</a></dt>
+		</dl>
+	</section>
+	<section><h3>Основни атрибути</h3>
+		<dl class="fa">
+			<dt><a href="https://www.w3schools.com/tags/att_input_readonly.asp"><code class="note">readonly</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_required.asp"><code class="note">required</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_size.asp"><code class="note">size</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_type.asp"><code class="note">type</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_value.asp"><code class="note">value</code> attribute @w3schools</a></dt>
+		</dl>
+	</section>
+</section>
+<section><h2>Ролята на <code class="note">name</code> атрибута в елементите на една форма</h2>
+	<section>
+		<dl class="fa">
+			<dt>От гледна точка на изпращането на данни, чрез <code>name</code> атрибута задаваме име на данните, които ще се асоциират с това поле.</dt>
+			<dt class="note">Ако дадено input поле няма дефиниран <code>name</code> атрибут, то няма да се изпратят въведените в него данни към сървъра!</dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<form action="/login" method="get">
+				<div>Име: <input type="text"></div>
+				<div>Парола: <input type="password" name="pass"></div>
+				<button type="submit">Submit</button>
+			</form>
+		</code></pre>
+		<p>Тествайте и погледнете в query string-а на URL какви данни ще се изпратя към сървъра.</p>
+	</section>
+</section>
+<section><h2>Радио-бутони (input type="radio")</h2>
+	<section>
+		<dl class="fa" style="font-size: .8em">
+			<dt>За да функционират радио контролите като избор на една от множество алтернативни стойности, то тези input полета трябва да имат <span class="note">една и съша стойност за атрибута <code>name</code></span></dt>
+			<dt>Стойността, която ще се подаде на сървъра след избора на потребителя, се определя от атрибута <code>value</code></dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<form action="/test" method="get">
+				<fieldset>
+					<legend>Gender</legend>
+					<label>male: <input type="radio" name="gender" value="male"></label>
+					<label>female: <input type="radio" name="gender" value="female"></label>
+					<label>other: <input type="radio" name="gender" value="other"></label>
+				</fieldset>
+
+				<input type="submit" name="">
+			</form>
+		</code></pre>
+	</section>
+</section>
+<section><h2>Елемент <code>input</code> като бутон</h2>
+	<section>
+		<dl class="fa">
+			<dt>input елемента притежава стойности за атрибута <code>type</code>: <code>submit</code>, <code>reset</code> и <code>button</code>, които имат същото значение и ефект, както при <code>button</code> елемента</dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<input type="submit" name="" value="Изпрати">
+			<input type="reset" name="" value="Изчисти">
+			<input type="бутон" name="" value="Click me">
+		</code></pre>
+		<p class="note">Вероятно бихте предпочели да използвате елемента <code>button</code>, когато искате да сложите бутон.</p>
+	</section>
+</section>
+<section><h2>Елемент <code>button</code></h2>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_button.asp">http://www.w3schools.com/tags/tag_button.asp</a></p>
+		<pre><code rel="HTML" class="html">
+			<!-- бутон, за изпращане на формата: -->
+			<button type="submit">Изпрати</button>
+
+			<!-- бутон, за изчистване на полетата: -->
+			<button type="reset">Изчисти</button>
+
+			<!-- бутон, без дефинирана функционалност - използва се с JavaScript: -->
+			<button type="button">Click me</button>
+		</code></pre>
+	</section>
+</section>
+<section><h2>Елемент <code class="html">label</code></h2>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_label.asp">http://www.w3schools.com/tags/tag_label.asp</a></p>
+		<p>Use case:</p>
+		<div class="results_h">
+			<fieldset>
+				<legend>Gender:</legend>
+				<label>male <input type="radio" name="gender" value="male" style="transform: scale(1.5); vertical-align: middle;"></label>
+				<label>female <input type="radio" name="gender" value="female" style="transform: scale(1.5); vertical-align: middle;"></label>
+				<label>other <input type="radio" name="gender" value="other" style="transform: scale(1.5); vertical-align: middle;"></label>
+			</fieldset>
+		</div>
+	</section>
+</section>
+<section><h2>Елементи <code>fieldset & legend</code></h2>
+	<section>
+		<a href="http://www.w3schools.com/tags/tag_fieldset.asp">http://www.w3schools.com/tags/tag_fieldset.asp</a>
+		<a href="http://www.w3schools.com/tags/tag_legend.asp">http://www.w3schools.com/tags/tag_legend.asp</a>
+	</section>
+</section>
+<section><h2>Елементи <code>select, option и optgroup</code></h2>
+	<section>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/tags/tag_select.asp">http://www.w3schools.com/tags/tag_select.asp</a></dt>
+			<dt><a href="http://www.w3schools.com/tags/tag_option.asp">http://www.w3schools.com/tags/tag_option.asp</a></dt>
+			<dt><a href="http://www.w3schools.com/tags/tag_optgroup.asp">http://www.w3schools.com/tags/tag_optgroup.asp</a></dt>
+		</dl>
+		<p>
+			<select name="town" style="font-size: 1em">
+				<option value="">Населено място</option>
+				<option value="София">София</option>
+				<optgroup label="А">
+					<option value="Айдемир">Айдемир</option>
+					<option value="Айрово">Айрово</option>
+					<option value="...">...</option>
+				</optgroup>
+				<optgroup label="Б">
+					<option value="Багренци">Багренци</option>
+					<option value="Балабанско">Балабанско</option>
+					<option value="...">...</option>
+				</optgroup>
+				<option value="towncustom_option">Друго</option>
+			</select>
+		</p>
+	</section>
+</section>
+<section><h2>Атрибута <code>multiple</code> върху <code>select</code></h2>
+	<section>
+		<p>АКо желаем потребителя да има възможност да избере няколко опции от <code>select</code> елемент, то трябва да добавим атрибута <a href="https://www.w3schools.com/tags/att_input_multiple.asp">multiple</a></p>
+		<pre><code rel="HTML" class="html">
+			<select name="color" multiple>
+				<option value="">Червено</option>
+				<option value="">Зелено</option>
+				<option value="">Синьо</option>
+				<option value="">Оранжево</option>
+				<option value="">Черно</option>
+				<option value="">Бяло</option>
+			</select>
+		</code></pre>
+			<select name="town" class="fontsize1" multiple>
+				<option value="">Червено</option>
+				<option value="">Зелено</option>
+				<option value="">Синьо</option>
+				<option value="">Оранжево</option>
+				<option value="">Черно</option>
+				<option value="">Бяло</option>
+			</select>
+		</p>
+	</section>
+</section>
+<section><h2>Елемент <code>textarea</code></h2>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_textarea.asp">http://www.w3schools.com/tags/tag_textarea.asp</a></p>
+		<div>
+			<textarea style="font-size: 1em;" rows="4" cols="50" placeholder="write your comment here..."></textarea>
+		</div>
+	</section>
+</section>
+<section><h2>Упражнения</h2>
+	<section><h3>Задача 1: simpleFormControls</h3>
+		<a href="HW/simpleFormControls.pdf">simpleFormControls</a>
+	</section>
+</section>
+
+
+
+
 <section class="disclaimer" data-background="../../../outfit/images/for_slides/the_end_on_sand.jpg">
      <p>These slides are based on</p>
      <p>customised version of </p>
