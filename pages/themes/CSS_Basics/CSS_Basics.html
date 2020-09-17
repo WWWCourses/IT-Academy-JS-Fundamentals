@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS_Basics</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link rel="shortcut icon" type="image/png" href="../../../favicon.png">
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../../lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../../outfit/css/themes/light.css" id="theme">
+	<style>
+		.fa-example>i{margin: 2rem;}
+		.fa-example>i:nth-of-type(1){font-size: 7em;color: #77EE77;}
+		.fa-example>i:nth-of-type(2){font-size: 6em;color: #EE7777;}
+		.fa-example>i:nth-of-type(3){font-size: 5em;color: #7777EE;}
+	</style>
+
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../index.html#CSS_Basics" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Основи на CSS</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../outfit/images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="20"><h1>Въведение в CSS</h1></section>
+<section><h2>Какво е CSS?</h2>
+	<section>
+		<dl class="fa">
+			<dt><abbr>CSS</abbr><dfn id="CSS"><span>Cascading</span><span>Style</span><span>Sheets</span></dfn></dt>
+			<dt>Съвкупност от форматиращи препоръки, правила, които указват <b>КАК</b> да се представи документа от
+				браузера.</dt>
+			<dt>Първа версия: Декември, 1996</dt>
+		</dl>
+	</section>
+	<section><h3>Cascading? Sheets? </h3>
+		<p>Комбиниране (каскадно) на различни стилови шаблони.</p>
+		<img class="norm" src="images/CSS_Cascade.png">
+	</section>
+</section>
+<section><h2>Защо CSS?</h2>
+	<section>
+		<p>Как изглеждаха Уеб страниците преди CSS:</p>
+		<dl>
+			<dt><a href="http://erights.org/">Open Source Distributed Capabilities</a></dt>
+			<dt><a href="http://eim.twenkid.com/old/index.html">Свещеният сметач, e-zin 2005</a></dt>
+		</dl>
+	</section>
+	<section>
+		<p class="advanced"><a
+				href="https://bg.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8F%D0%BD%D0%B5_%D0%BD%D0%B0_%D0%BE%D1%82%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B8">Разделяне
+				на отговорности</a><a
+				href="https://en.wikipedia.org/wiki/Separation_of_concerns#HTML.2C_CSS.2C_JavaScript"> (Separation of
+				concernrs)</a></p>
+		<dl class="fa">
+			<dt><strong class="note">HTML:</strong></dt>
+			<dd>Съдържанието на документа.</dd>
+			<dd><b class="note">КАКВО</b> ще се изобрази.</dd>
+			<dd>Структура и семантика на елементите.</dd>
+			<dt><strong class="note">CSS:</strong></dt>
+			<dd>Оформлението на документа.</dd>
+			<dd><b class="note">КАК</b> ще се изобрази.</dd>
+			<dd>Форматиране и подреждане на елементите</dd>
+		</dl>
+	</section>
+	<section>
+		<p>Преносимост на документа между различните видове медии: екран (PC, tablet, phones, ...), принтер, проектор,
+			аудио браузер, и пр.)</p>
+		<img class="norm" src="images/MultiViewports.png">
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Keep <strong><a
+						href="https://bg.wikipedia.org/wiki/%D0%9D%D0%B5_%D1%81%D0%B5_%D0%BF%D0%BE%D0%B2%D1%82%D0%B0%D1%80%D1%8F%D0%B9">DRY</a></strong>
+				(Don't Repeat Yourself)</dt>
+		</dl>
+		<img class="norm" src="images/CSS_DRY.png">
+	</section>
+	<section>
+		<p>Структуриран, концентриран единствено върху съдържанието, четим HTML код.</p>
+		<pre><code rel="HTML">
+			&lt;body bgcolor=&quot;#000000&quot;&gt;
+				&lt;div border=&quot;1&quot; bordercolor=&quot;red&quot;&gt;
+					&lt;p&gt;&lt;font face=&quot;verdana&quot; color=&quot;blue&quot;&gt; Това е параграф оцветен в синьо !&lt;/font&gt;&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/body&gt;
+		</code></pre>
+		<p>VS.</p>
+		<pre><code rel="HTML">
+			&lt;head&gt;
+			  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;main.css&quot;&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				&lt;div&gt;
+					&lt;p&gt;Това е параграф оцветен в синьо !&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/body&gt;
+		</code></pre>
+	</section>
+</section>
+<section><h2>Какво можем да правим със CSS?</h2>
+	<section>
+		<p>Просто разгледайте тук: <a href="https://codepen.io/search/pens/?limit=all&page=2&q=CSS+only"
+				title="CSS only Pens in Codepen">"CSS only" Pens in Codepen</a></p>
+	</section>
+</section>
+<section><h2>CSS правила - синтаксис</h2>
+	<section>
+		<p>Общ синтаксис на едно CSS правило:</p>
+		<pre><code rel="Formal Syntax">
+			selector {
+				property1: value1;
+				property2: value2;
+				   ...
+			}
+		</code></pre>
+		<p>Пример:</p>
+		<pre><code rel="CSS">
+			h1{
+				background-color: red;
+				color: white;
+			}
+		</code></pre>
+	</section>
+	<section>
+		<p>Общ синтаксис на едно CSS правило:</p>
+		<img class="norm" src="images/CSS_syntax_image.png">
+	</section>
+	<section>
+		<p>Селекторите могат да се групират - отделят се със запетайка</p>
+		<pre><code rel="CSS">
+			h2,h4 {
+				color: white;
+			}
+		</code></pre>
+	</section>
+	<section>
+		<p>Декларациите също могат да се групират – отделят се с точка и запетая ‘ ; ’</p>
+		<pre><code rel="CSS">
+			h4 {
+				background-color: red;
+				color: white;
+				border: 5px solid gray;
+			}
+		</code></pre>
+		<p>' ; ' след последна декларация не е задължителна, но е добра практика да се поставя винаги – улеснява
+			редактирането на кода.</p>
+	</section>
+	<section style="font-size: .7em">
+		<p>Пример</p>
+		<pre><code rel="HTML">
+			<div class="flag bg">
+				<span>Бяло</span><span>Зелено</span><span>Червено</span>
+			</div>
+		</code></pre>
+		<a href="examples/flag_without_css.html">резултат (без CSS)...</a>
+		<pre class="fragment"><code rel="CSS" style="height: 40vh">
+		  .flag{
+			  display: inline-block;
+			  line-height: 2em;
+			  width: 20em;
+			  border: .2em solid #333;
+		  }
+		  .flag>span{
+			  display: block;
+		  }
+		  .bg>span:nth-child(1){
+			  background: white;
+			  color: #CCC;
+		  }
+		  .bg>span:nth-child(2){
+			  background: green;
+			  color: #CCC;
+		  }
+		  .bg>span:nth-child(3){
+			  background: red;
+			  color: #CCC;
+		  }
+		</code></pre>
+		<a class="fragment" href="examples/flag_with_css.html">резултат (със CSS)...</a>
+	</section>
+	<section><h3>Коментари в CSS</h3>
+		<dl>
+			<dt><code>/*</code> - за начало на коментар</dt>
+			<dt><code>*/</code> - за край на коментар</dt>
+		</dl>
+		<p>Пример:</p>
+		<pre><code rel="CSS">
+			/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			  Пример за многоредов коментар
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+			/*Main_Sections_Title*/
+			section>h2{
+				font-size: 1em;
+				-webkit-border-radius: 12px;  /* Safari 3-4 */
+				-moz-border-radius: 12px;     /* Firefox 3.6 and below */
+				border-radius: 12px;          /* modern browsers */
+				/*background: red;*/
+			}
+		</code></pre>
+	</section>
+</section>
+<section><h2>Как?</h2>
+	<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Inline CSS</a></h3>
+		<p>Чрез <em>атрибутa</em> <code>style</code> за всеки един HTML елемент: </p>
+		<pre><code rel="Formal Syntax">
+			&lt;tag style="[property:value;]+"&gt;
+		</code></pre>
+		<p>Например:</p>
+		<pre><code rel="HTML">
+			&lt;p style="color:green;"&gt;текст в зелено&lt;/p&gt;
+		</code></pre>
+		<p><i>Предимства? Недостатъци?</i></p>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Internal CSS</a></h3>
+		<p>В HEAD секцията, в ‘style’ елемента:</p>
+		<pre><code rel="HTML">
+			&lt;head&gt;
+				&lt;style type=”text/css”&gt;
+					p {
+						text-indent:5%;
+						color : gray;
+					}
+
+					h2 {
+						text-indent:15%;
+						font-size: 1.5em;
+						color : red;
+					}
+				&lt;/style&gt;
+			&lt;/head&gt;
+		</code></pre>
+		<p><i>Предимства? Недостатъци?</i></p>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">External CSS</a></h3>
+		<p>Чрез дефиниране на CSS правилата в отделен файл ( *.css ). Свързва се с документа посредством елемента
+			<code>link</code> в заглавната част на документа:</p>
+		<pre><code rel="HTML">
+			&lt;head&gt;
+				&lt;link rel="stylesheet" type="text/css" href="css/basic.css" &gt;
+			&lt;/head&gt;
+		</code></pre>
+		<p><span class="note">NB! </span>Атрибута <code>type</code> може да се пропуска, тъй като в HTML5 се подразбира
+			<code>type="text/css"</code></p>
+		<p><i>Предимства? Недостатъци?</i></p>
+	</section>
+</section>
+<section><h2 class="advanced">Каскадност на CSS правилата</h2>
+	<section>
+		<p>Върху един (или повече) HTML елемент може да се приложат CSS правилa, написани на различни места. <br>
+			Когато имаме задаване на едно и също пропърти с различна стойност, браузера избира кое ще се приложи в зависимост от:</p>
+		<ul class="fa">
+			<li>Специфичност (specificity)</li>
+			<li>Наследяване (inheritance)</li>
+			<li>Местоположение (location)</li>
+		</ul>
+	</section>
+	<section><h3>Специфичност (specificity)</h3>
+		<p>Определя се от типа на селектора - колкото по-специфичен е един селектор, с толкова по-висок приоритет ще
+			бъде той.</p>
+		<p><i>(ще разгледаме подробно в темата за CSS селектори)</i></p>
+	</section>
+	<section><h3>Специфичност - пример</h3>
+		<pre><code rel="CSS" class="css">
+			#p1{
+				background-color: blue
+			}
+			.red{
+				background-color: red;
+			}
+		</code></pre>
+		<pre><code rel="HTML" class="html5">
+			<p id="p1" class="red">red or blue?</p>
+		</code></pre>
+	</section>
+	<section><h3>Наследяване (inheritance)</h3>
+		<h5>Дървовидна структура на HTML документ</h5>
+		<img src="images/HTML_tree.png">
+	</section>
+	<section><h3>Наследяване (inheritance)</h3>
+		<p> Някои CSS свойства се наследяват от елементи-родители в HTML дървото</p>
+		<p>Такива са повечето <em>свойства за оформление на текст</em>, които ще бъдат разгледани по-детайлно в
+			следващите теми.</p>
+		<!-- <p style="font-size: .5em"><a href="examples/CSS_rules_inheritance_on_tree.html">Пример</a></p> -->
+		<!-- <img class="norm" src="images/CSS_rules_inheritance_on_tree.png"> -->
+	</section>
+	<section><h3>Наследяване (inheritance) - пример</h3>
+		<pre><code rel="CSS" style="font-size: .8em">
+		body{
+			/*Всички елементи в body, ще се изобразят с черен  шрифт*/
+			color: black;
+		}
+		/*Всички елементи в div, ще се изобразят с бял  шрифт върху червен фон*/
+		div{
+			color: white;
+			background-color: red;
+		}
+	  </code></pre>
+		<!-- <p style="font-size: .5em"><a href="examples/CSS_rules_inheritance_on_tree.html">Пример</a></p> -->
+		<img class="norm" src="images/CSS_rules_inheritance_on_tree.png">
+	</section>
+	<section style="font-size: .7em"><h3>Наследяване (inheritance) - primer</h3>
+		<p><strong>Не всички свойства се наследяват!</strong></p>
+		<p>Експериментирайте със следния код:</p>
+		<pre><code rel="CSS">
+		body{
+			background-color: lightblue;
+			color: black;
+		}
+		div{
+			background-color: red;
+			color: white;
+			/*забележете дали свойството border се наследява, така както color*/
+			border: 5px solid green;
+		}
+	  </code></pre>
+		<pre><code rel="HTML">
+		<h2>Заглавие</h2>
+		<div>
+			<p>текст в параграф...</p>
+			<ul>
+				<li>Елемент1</li>
+				<li>Елемент2</li>
+				<li>Елемент3</li>
+			</ul>
+		</div>
+		<p>друг параграф...</p>
+	  </code></pre>
+	</section>
+	<section id="CSS_cascade_Location_Rule"><h3>Местоположение (location): rule of thumbs</h3>
+		<p>Колкото по-близо до даден елемент е дефинирано правилото касаещо неговото оформление, толкова по-висок
+			приоритет ще има това правило</p>
+	</section>
+	<section style="font-size: .8em"><h3 class="advanced">Местоположение (location): official rule</h3>
+		<ol reversed>
+			<li>Стил, прилаган от Браузера.</li>
+			<li>Потребителски стил на Браузера (“reader/user style sheet”)</li>
+			<li><span>Стил, зададен в HEAD секцията:</span>
+				<ul>
+					<li>Външен стил, свързан със документа чрез елемента link.</li>
+					<li>Импортиран стил в документа, добавен чрез @import правилото)</li>
+					<li>Вграден в документа стил (Embedded style sheets) чрез елемента style</li>
+				</ul>
+			</li>
+			<li>Инлайн стил, добавен към елемент чрез атрибута му style в отварящия таг</li>
+			<li>Правило, маркирано като !important от автора на страницата.</li>
+			<li>Правило, маркирано като !important от потребителя</li>
+		</ol>
+	</section>
+	<section style="font-size: .95em"><h3>Местоположение (location) - пример</h3>
+		<pre><code rel="CSS (main.css)" class="css">
+			p{
+				color: blue;
+			}
+	  	</code></pre>
+		<pre><code rel="HTML (main.html)" class="html" style="height: 40vh">
+			&lt;head&gt;
+				&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+					p{
+						color: red;
+					}
+				&lt;/style&gt;
+				&lt;!-- тъй като включваме CSS файла след style елемента, то правилата в него ще бъдат с приоритет --&gt;
+				&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;CSS_cascade_location_rule.css&quot;&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				&lt;p&gt;Paragraph 1&lt;/p&gt;
+				&lt;p style=&quot;color: green&quot;&gt;Paragraph 2&lt;/p&gt;
+			&lt;/body&gt;
+	  	</code></pre>
+		<p>Какъв цвят ще бъде шрифта на всеки параграф?</p>
+		<a class="fragment" href="examples/CSS_cascade_location_rule.html">Резултат...</a>
+	</section>
+	<section><h3>Пример за !important</h3>
+		<pre><code rel="CSS">
+			p{
+				background: red !important;
+				color: white;
+			}
+		</code></pre>
+		<pre><code rel="HTML">
+			<p style="background-color: gray; color: black">текст в параграф...</p>
+		</code></pre>
+		<p>Как ще бъде оцветен параграфа и текста в него?</p>
+		<a class="fragment" href="examples/CSS_rules_precedence_important.html">Резултат...</a>
+	</section>
+</section>
+
+
+<section id="textStylingProperties"><h1>CSS свойства за оформление на текст</h1></section>
+<section><h2>CSS свойства за оформление на текст</h2>
+	<section><h3>Overview</h3>
+		<a href="http://www.w3schools.com/css/css_text.asp">w3schools: CSS Text</a>
+		<div class="results_h" style="color: #555; padding: .6em;">
+			<p style="color:red; border: 1px solid #999;line-height:2em;">Можем да променяме цвета на шрифта</p>
+			<p style="text-align: right;border: 1px solid #999;line-height:2em;">Да зададем хоризонтално подравняване на текста</p>
+			<p style="line-height:2em; border: 1px solid #999;"><span style="line-height:normal; vertical-align:bottom;">Да подравним текста вертикално.</span></p>
+			<p style="border: 1px solid #999;line-height:2em;text-decoration: underline;">Да подчертаваме текста</p>
+			<p style="border: 1px solid #999;line-height:2em;text-transform: uppercase">Да преобразуваме малки/големи букви</p>
+			<p style="border: 1px solid #999;line-height:1em;text-indent:30px">Да отместваме в ляво първия ред на параграф, с каквато пожелаем стойност. Така, както се прави в печатната литература, с цел да се улесни читателя визуално да разграничава началото на параграф.</p>
+			<p style="border: 1px solid #999;line-height:2em;letter-spacing: .5em">Да променяме разстоянието между буквите.</p>
+			<p style="border: 1px solid #999;line-height:2em;word-spacing: .7em">Да променяме разстоянието между думите.</p>
+			<p style="border: 1px solid #999;line-height:2em;">Да променяме разстоянието между редовете. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+		</div>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/cssref/pr_text_color.asp">w3schools: CSS color Property</a></dt>
+			<dt><a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">w3schools: CSS text-decoration Property</a></dt>
+			<dt><a href="http://www.w3schools.com/cssref/pr_text_text-indent.asp">w3schools: CSS text-indent Property</a></dt>
+			<dt><a href="http://www.w3schools.com/cssref/pr_text_letter-spacing.asp">w3schools: CSS letter-spacing Property</a></dt>
+			<dt><a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">w3schools: CSS text-align Property</a></dt>
+		</dl>
+	</section>
+
+	<section><h3>Vertical Align and Line Height</h3>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/cssref/pr_pos_vertical-align.asp">w3schools: CSS vertical-align Property</a></dt>
+			<dt><a href="https://www.w3schools.com/cssref/pr_dim_line-height.asp">w3schools:CSS line-height Property</a></dt>
+		</dl>
+	</section>
+	<section><h3>vertical-align: пример</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="vertical-align (quick demo)" src="https://codepen.io/webdesigncourse/embed/NWqXwEE?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/NWqXwEE'>vertical-align (quick demo)</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+</section>
+<section><h2>CSS свойства за оформление на шрифт</h2>
+	<section>
+		<a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Fonts</a>
+		<div class="results_h" style="color: #555; padding: .6em;">
+			<p style="font-family: 'Marck Script', cursive; font-size: 1.5em; border: 1px solid #999;">Можем да задаваме тип на шрифта</p>
+			<p style="font-size: 3em; border: 1px solid #999;">Можем да управляваме размера на шрифта</p>
+			<p style="font-size: 1em; border: 1px solid #999; font-style: italic;">Можем да задаваме стила на шрифта</p>
+			<p style="font-size: 1em; border: 1px solid #999; font-weight: 900;">Можем да управляваме дебелината на шрифта.</p>
+		</div>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">w3schools: CSS font-size Property</a></dt>
+			<dt><a href="http://www.w3schools.com/cssref/pr_font_font-style.asp">w3schools: CSS font-style Property</a></dt>
+			<dt><a href="http://www.w3schools.com/cssref/pr_font_weight.asp">w3schools: CSS font-weight Property</a></dt>
+			<dt><a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">w3schools: CSS font-family Property</a></dt>
+		</dl>
+	</section>
+	<section><h3>Font - съкратен запис за всички Font свойства</h3>
+		<p>Свойство: font</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_font_font.asp">w3schools: CSS font Property</a></p>
+	</section>
+	<section><h3>Включване на Google Fonts</h3>
+		<dl class="fa" style="font-size: .9em">
+			<dt>Отворете <a href="https://fonts.google.com/">fonts.google.com</a></dt>
+			<dt>От менюто "Categories" (в дясно), маркирайте категориите шрифтове, които ви интересуват.</dt>
+			<dt>Ако желаете само шрифтове, които да поддържат кирилица, то задайте език "Cyrillic" чрез менюто "Languages"</dt>
+			<dt>Може да прегледате отделните шрифтове като зададете ваш текст, от настройките за съответния шрифт:</dt>
+			<dd>От падащото меню за дадения шриф, изберете "custom" (<a href="images/googleFonts/select_custom_preview_1.png">ето как</a>)</dd>
+			<dd>След като въведете текста, може да го приложите върху всички шрифтове, като изберете "APPLY TO AL FONTS" (<a href="images/googleFonts/select_custom_preview_2.png">ето как</a>)</dd>
+		</dl>
+	</section>
+	<section><h3>Включване на шрифтове-икони</h3>
+		<dl class="fa">
+			<dt>Предпочитан вариант за икони е да използвате някоя от библиотеките, които предлагат векторни икони като шрифтове, вместо 'jpg', 'png' и пр. растерни изображения.</dt>
+			<dt>Може да търсите по име в някои от най-популярните библиотеки: <a href="https://glyphsearch.com/">glyphsearch</a></dt>
+		</dl>
+	</section>
+	<section><h3>Font Awesome Icons</h3>
+		<div class="fa-example"><i class="fa fa-smile-o"></i><i class="fa fa-meh-o"></i><i class="fa fa-frown-o"></i></div>
+	</section>
+	<section><h3>Font Awesome Icons- howto</h3>
+		<dl class="fa">
+			<dt>Вместо да сваляме  Font Awesome на нашия сървър, ще използваме CDN (Content Delivery Network), тъй като те са cloud базирани. Може да използвате:</dt>
+			<dd><a href="https://fontawesomecdn.com/">Font Awesome CDN</a></dd>
+			<dd><a href="https://www.bootstrapcdn.com/fontawesome/">BootstrapCDN</a></dd>
+			<dd>Или да се регистрирате с мейл към <a href="https://cdn.fontawesome.com/">Font Awesome CDN</a> за да получите персонализирана библиотека.</dd>
+			<dt>Без значение кой източник ще използвате, бъдете сигурни, че сте избрали <span class="note">min</span> версията на съответния файл.</dt>
+		</dl>
+	</section>
+	<section><h3>Font Awesome Icons- example</h3>
+			<pre><code rel="HTML">
+				<!-- включваме Font Awesome min css : -->
+				&lt;head&gt;
+					&lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+					<!-- слагаме елемента, който ще генерира иконката -->
+					&lt;i class=&quot;fa fa-smile-o&quot;&gt;&lt;/i&gt;
+				&lt;/body&gt;
+			</code></pre>
+	</section>
+</section>
+<section><h2>CSS свойства за фон на елемент</h2>
+	<section>
+		<a href="http://www.w3schools.com/css/css_background.asp">w3schools: CSS Backgrounds</a>
+	</section>
+	<section><h3>Background Color</h3>
+		<p>Свойство: background-color</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_background-color.asp">w3schools: CSS background-color Property</a></p>
+	</section>
+	<section><h3>Background Image</h3>
+		<p>Свойство: background-image</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_background-image.asp">w3schools: CSS background-image Property</a></p>
+	</section>
+	<section><h3>Background Image - Size</h3>
+		<p>Свойство: background-size</p>
+		<p><a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp">w3schools: CSS background-size Property</a></p>
+	</section>
+	<section><h3>Background Image - Repeat</h3>
+		<p>Свойство: background-repeat</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_background-repeat.asp">w3schools: CSS background-repeat Property</a></p>
+	</section>
+	<section><h3>Background Image - Position</h3>
+		<p>Свойство: background-position</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_background-position.asp">w3schools: CSS background-position Property</a></p>
+	</section>
+	<section><h3>Background Image - Attachment</h3>
+		<p>Свойство: background-attachment</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_background-attachment.asp">w3schools: CSS background-attachment Property</a></p>
+	</section>
+	<section><h3>Background - съкратен запис за всички Backgrounds свойства</h3>
+		<p>Свойство: background</p>
+		<p><a href="http://www.w3schools.com/cssref/css3_pr_background.asp">w3schools: CSS background Property</a></p>
+	</section>
+	<section id="background_examples"><h3>Задаване на фон за цялата страница.</h3>
+		<dl class="fa">
+			<dt>Елемента, на който искаме да поставим изображението като фон е <b>body</b>.</dt>
+			<dt>Височината на елемента <b>body</b> се определя динамично, в зависимост от съдържанието!</dt>
+			<dt>За да сме сигурни, че елемента <b>body</b> ше бъде висок поне колкото viewport-a, трябва да зададем:</dt>
+			<pre><code rel="CSS">
+				html, body{
+					min-height: 100%;
+				}
+			</code></pre>
+			<dt class="note">Бихме могли да използваме и <b>vh</b> еденици, вместо процент.</dt>
+		</dl>
+	</section>
+	<section><h3>Задаване на фон за цялата страница - примери</h3>
+		<dl class="fa">
+			<dt>Пример за снимка, поместена във viewport-a, като пропорциите се запазват.
+				Изображението не се изрязва.<br>
+				<span class="note">Не гарантира запълването на целия фон</span>.</dt>
+			<dd><a href="slides_examples/backgrounds/bg_image_contain_viewport.html">bg_image_contain_viewport</a></dd>
+			<dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите се запазват.<br>
+				<span class="note">Изображението може да бъде изрязано</span>.</dt>
+			<dd><a href="slides_examples/backgrounds/bg_image_cover_viewport.html">bg_image_cover_viewport</a></dd>
+			<dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите <b>не се запазват</b>!</dt>
+			<dd><a href="slides_examples/backgrounds/bg_image_to_viewport.html">bg_image_to_viewport</a></dd>
+
+		</dl>
+	</section>
+</section>
+<section><h2>CSS свойства за рамка на елемент</h2>
+	<section>
+		<a href="http://www.w3schools.com/css/css_border.asp">w3schools: CSS Borders</a>
+	</section>
+	<section><h3>Border Style</h3>
+		<p>Свойство: border-style</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_border-style.asp">w3schools: CSS border-style Property</a></p>
+	</section>
+	<section><h3>Border Width</h3>
+		<p>Свойство: border-width</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_border-width.asp">w3schools: CSS border-width Property</a></p>
+	</section>
+	<section><h3>Border Color</h3>
+		<p>Свойство: border-color</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_border-color.asp">w3schools: CSS border-color Property</a></p>
+	</section>
+	<section><h3>Border - съкратен запис за всички Border свойства</h3>
+		<p>Свойство: border</p>
+		<p><a href="http://www.w3schools.com/cssref/pr_border.asp">w3schools: CSS border Property</a></p>
+	</section>
+</section>
+<section><h2>Задачи за упражнение</h2>
+	<section style="font-size:.9em"><h5>The Crow</h5>
+		<div class="text_left fontsize_08">
+		<p>Да се състави страница, наподобяваща максимално точно показаната на <a href="homework/the_crow/TheCrow Solution-Screen1.png">фиг.1</a>. Кодът трябва да е <a href="https://validator.w3.org/nu/#textarea">валиден HTML5</a>!</p>
+		<p>Забележете, че всеки текст, който е заграден в кавички е оформен различно от останалият: шрифтът е наклонен, а разстоянието между буквите е 2px. Отделно, всяка фраза "никой друг!" е подчертана с оранжево (преливащо към кафяво -  може да увеличите изгледа за да видите по-ясно).Също така, обърнете внимание на типа шрифт (serif, sans-serif) и задайте съответния.</p>
+		<p>Текстът на стихотворението може да копирате и от тук: <a href="https://chitanka.info/text/2384-garvanyt">https://chitanka.info/text/2384-garvanyt</a> (използвани са само първите 4 куплета.)</p>
+		<p>Използваното за фон изображение, може да изтеглите от тук: <a href="https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849">https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849</a>. То заема цялото съдържание на страницата, като пропорциите НЕ СЕ запазват.</p>
+		<hr>
+		<p class="fontsize_08">Едно от възможните решения може да видите тук:  <a href="homework/the_crow/TheCrow-Solution.html">TheCrow-Solution.html</a></p>
+		</div>
+	</section>
+</section>
+
+
+<section><h1>Стойности за цветове и мерни единици в CSS3</h1></section>
+<section><h2>Стойности за цветове</h2>
+	<section><h3>Чрез предефинирани имена</h3>
+		<div id="colors" style="height: 70vh; overflow: scroll"></div>
+		<script type="text/javascript">
+			let cssColorModuleLevel4 = ['aliceblue','antiquewhite','aqua','aquamarine','azure','beige','bisque','black','blanchedalmond','blue','blueviolet','brown','burlywood','cadetblue','chartreuse','chocolate','coral','cornflowerblue','cornsilk','crimson','cyan','darkblue','darkcyan','darkgoldenrod','darkgray','darkgreen','darkgrey','darkkhaki','darkmagenta','darkolivegreen','darkorange','darkorchid','darkred','darksalmon','darkseagreen','darkslateblue','darkslategray','darkslategrey','darkturquoise','darkviolet','deeppink','deepskyblue','dimgray','dimgrey','dodgerblue','firebrick','floralwhite','forestgreen','fuchsia','gainsboro','ghostwhite','gold','goldenrod','gray','green','greenyellow','grey','honeydew','hotpink','indianred','indigo','ivory','khaki','lavender','lavenderblush','lawngreen','lemonchiffon','lightblue','lightcoral','lightcyan','lightgoldenrodyellow','lightgray','lightgreen','lightgrey','lightpink','lightsalmon','lightseagreen','lightskyblue','lightslategray','lightslategrey','lightsteelblue','lightyellow','lime','limegreen','linen','magenta','maroon','mediumaquamarine','mediumblue','mediumorchid','mediumpurple','mediumseagreen','mediumslateblue','mediumspringgreen','mediumturquoise','mediumvioletred','midnightblue','mintcream','mistyrose','moccasin','navajowhite','navy','oldlace','olive','olivedrab','orange','orangered','orchid','palegoldenrod','palegreen','paleturquoise','palevioletred','papayawhip','peachpuff','peru','pink','plum','powderblue','purple','rebeccapurple','red','rosybrown','royalblue','saddlebrown','salmon','sandybrown','seagreen','seashell','sienna','silver','skyblue','slateblue','slategray','slategrey','snow','springgreen','steelblue','tan','teal','thistle','tomato','turquoise','violet','wheat','white','whitesmoke','yellow','yellowgreen'];
+				let outputNode = document.getElementById('colors');
+
+				for (let i = 0; i < cssColorModuleLevel4.length; i++) {
+					let color = cssColorModuleLevel4[i];
+
+					let newDiv = document.createElement("div");
+					newDiv.appendChild( document.createTextNode(color) );
+					outputNode.appendChild(newDiv);
+
+					newDiv.style.backgroundColor = color;
+					newDiv.style.color = "#000";
+					newDiv.style.display = "inline-block";
+					newDiv.style.fontSize = "16px";
+					newDiv.style.minWidth = "5em";
+					newDiv.style.padding = "0.6em";
+				}
+		</script>
+	</section>
+	<section><h3>Чрез предефинирани имена</h3>
+		<dl class="fa">
+			<dt>Имената могат да се записват чрез малки или големи букви (case-insensitive).</dt>
+			<dt><a href="https://www.w3schools.com/colors/colors_hex.asp">Color Values @w3schools</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords">Color_keywords @MDN</a></dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: purple;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Чрез предефинирани имена</h3>
+		<p>Този начин за задаване на цветове се използва рядко, предимно за примери/тестване.</p>
+	</section>
+	<section><h3>Чрез RGB - десетичен запис</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				rgb(<span style="color: red">RedValue</span>, <span style="color: green">GreenValue</span>, <span style="color:blue">BlueValue</span>);
+		</div>
+		<dl class="fa">
+			<dt>Стойностите могат да бъдат зададени като:</dt>
+			<dd>Десетично число в интервала [0 - 255]</dd>
+			<dd>Процент: от 0% до 100%</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+				color: rgb(255, 0, 0);	   /*червено*/
+				color: rgb(100%, 0%, 0%);  /*червено*/
+				color: rgb(0, 0, 255);     /*синьо*/
+				color: rgb(0%, 0%, 100%);  /*синьо*/
+				color: rgb(255, 255, 0);   /*жълто*/
+				color: rgb(100%, 100%, 0%);/*жълто*/
+				color: rgb(0, 0, 0);       /*черно*/
+				color: rgb(255,255,255);   /*бяло*/
+				color: rgb(127,127,127);   /*сиво*/
+		</code></pre>
+	</section>
+	<section><h3>Чрез RGB - шестнадесетичен запис (Hex triplet)</h3>
+		<p>Използват се шестнадесетични цифри (hexadecimal notation)</p>
+		<a href="images/HexDigits.png"><img src="images/HexDigits.png"></a>
+	</section>
+	<section><h3>Чрез RGB - шестнадесетичен запис (Hex triplet)</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span>;
+		</div>
+		<dl class="fa">
+			<dt>За всеки цвят задаваме шестнадесетично число в диапазона: 00 - FF</dt>
+			<dt>Общо 6 шестнадесетични цифри</dt>
+			<dt><i class="advanced"></i>С две допълнителни цифри в края може да се зададе алфа нивото (<a href="#alphaChanelByHextriplets">виж alphaChanelByHextriplets</a>)</dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: #FF0000; /*червено*/
+				color: #0000FF; /*синьо*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>RGB - съкратен шестнадесетичен запис</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span>;
+		</div>
+		<dl class="fa">
+			<dt>За всеки цвят задаваме шестнадесетично число в диапазона: 0 - F</dt>
+			<dt>Общо 3 шестнадесетични цифри</dt>
+			<dt><i class="advanced"></i>С допълнителна, 4-та цифра, може да се зададе алфа нивото  (<a href="#alphaChanelByHextriplets">виж alphaChanelByHextriplets</a>).</dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: #F00; /*червено*/
+				color: #00F; /*синьо*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>Hex triplet - пример</h3>
+		<iframe   title='Формиране на цветове в HTML' src='//codepen.io/webdesigncourse/embed/qOLdod/?height=300&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/qOLdod/'>Формиране на цветове в HTML</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3 class="advanced">Чрез HSL: Hue, Saturation, Lightness</h3>
+		<p>The color wheel</p>
+		<a href="images/hsl-color-wheel.png"><img src="images/hsl-color-wheel.png"></a>
+	</section>
+	<section><h3 class="advanced">Чрез HSL: Hue, Saturation, Lightness</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+			hsl(hue, saturation%, lightness%);
+		</div>
+		<dl class="fa">
+			<dt>hue – стойност в интервала [0-360] градуса, където:</dt>
+			<dd>0 – червен цвят</dd>
+			<dd>120 – зелен цвят</dd>
+			<dd>240 – син цвят</dd>
+
+			<dt>saturation – насищане на цвета: от 0% до 100%</dt>
+			<dt>lightness - осветеност: 0% - черно, 100% - бяло;</dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: hsl(0, 100%, 50% ); /*червено*/
+				color: hsl(240, 100%, 50% ); /*синьо*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>Задаване на прозрачност за цвят (alpha channel) чрез RGBA</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				rgba(<span style="color: red">RedValue</span>, <span style="color: green">GreenValue</span>, <span style="color:blue">BlueValue</span>, <span>alphaValue</span>);
+		</div>
+		<dl class="fa">
+			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
+			<dd>alphaValue = 0 (или 0%): пълна прозрачност</dd>
+			<dd>alphaValue = 1 (или 100%): пълна непрозрачност</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: rgba(255, 0, 0, 0.5); /* полупрозрачно червено*/
+				background-color: rgba(255, 0, 0, 0); /* напълно прозрачно "червено"*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>Задаване на прозрачност за цвят (alpha channel) чрез HSLA</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+			hsla(hue, saturation%, lightness%, alphaValue);
+		</div>
+		<dl class="fa">
+			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
+			<dd>alphaValue = 0 (или 0%): пълна прозрачност</dd>
+			<dd>alphaValue = 1 (или 100%): пълна непрозрачност</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				/* полупрозрачно червено*/
+				background-color: hsla(0, 100%, 50%, 0.5 );
+
+				 /* напълно прозрачно "червено"*/
+				background-color: hsla(0, 100%, 50%, 0 );
+			}
+		</code></pre>
+	</section>
+	<section id="alphaChanelByHextriplets"><h3>Задаване на прозрачност за цвят (alpha channel) чрез Hex Triplets</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span><span>alphaValue</span>;
+		</div>
+		<dl class="fa">
+			<dd>alphaValue може да бъде в интервала [00 - FF] или в [0 - F]</dd>
+			<dd>alphaValue = 00 (или 0): пълна прозрачност</dd>
+			<dd>alphaValue = FF (или F): пълна непрозрачност</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				/* полупрозрачно червено - чрез  8 цифрен hex запис*/
+				background-color: #FF000080;
+
+				 /* напълно прозрачно "червено" - чрез  4 цифрен hex запис*/
+				background-color: #FF00;
+			}
+		</code></pre>
+	</section>
+	<section><h3>alphaChanelValues - пример</h3>
+		<iframe   title='alphaChanelvalues' src='//codepen.io/webdesigncourse/embed/EbqLeX/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/EbqLeX/'>alphaChanelvalues</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Задаване на прозрачност за елемент (<a href="https://www.w3schools.com/cssref/css3_pr_opacity.asp">opacity property</a>)</h3>
+		<p>Прозрачността за цвят, не бива да се бърка със свойството <code>opacity</code>, което задава прозрачност за целия елемент! </p>
+		<iframe title='Element vs BG color Opacity' src='//codepen.io/webdesigncourse/embed/rpwJvV/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/rpwJvV/'>Element vs BG color Opacity</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+		<!-- <iframe   title='Формиране на цветове в HTML' src='//codepen.io/webdesigncourse/embed/qOLdod/?height=300&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/qOLdod/'>Формиране на цветове в HTML</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe> -->
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+</section>
+<section><h2>Единици за дължина (length units)</h2>
+	<section>
+		<dl class="fa">
+			<dt>Чрез тях задаваме стойности за width, height, margin, padding, font-size и пр.</dt>
+			<dt>Например:</dt>
+			<pre><code rel="CSS" data-noescape>
+				width: 100<b>px</b>;
+				height: 80<b>%</b>;
+				margin: 0;
+				font-size: 2<b>em</b>;
+			</code></pre>
+			<dt>Записват се <span class="note">непосредствено</span> след самото число, без спейс.</dt>
+			<dt>Ако стойността е 0 можем да не уточняваме мерната единица.</dt>
+			<dt>Реалните числа се записват с точка, не със запетая. Например: <code>1.5px</code></dt>
+			<dt>Нулата в цялата част на числото може да се пропусне. Например: <code>0.5px</code> може да се запише като <code>.5px</code></dt>
+		</dl>
+	</section>
+	<section><h3>Абсолютни:</h3>
+		<dl class="fa">
+			<dt><span class="keyword">px</span> : пиксела (1px = 1/96 от инча)</dt>
+			<dd>Използват се при екранна медия (screen media)</dd>
+			<dt><span class="keyword">pt</span> : точки (1pt = 1/72 от инча)</dt>
+			<dd>Използват се, когато медията е принтер.</dd>
+			<dt><span class="keyword">cm</span> : сантиметъра</dt>
+			<dt><span class="keyword">mm</span> : милиметра</dt>
+			<dt><span class="keyword">in</span> : инча</dt>
+		</dl>
+		<p class="note">Когато желаете страницата да изглежда еднакво добре на различни устройства (responsive design), не бихте желали да използвате абсолютни мерни единици</p>
+		<p>Абсолютни мерни единици, и то <code>pt</code>, бихте желали да използвате, когато подготвяте документ за принтиране.</p>
+	</section>
+	<section><h3>Релативни:</h3>
+		<dl class="fa">
+			<dt><span class="keyword">em</span> : изчислява се спрямо  <span class="note">размера на шрифта на текущия елемент</span>. Не забравяйте, че font-size е наследимо свойство!.</dt>
+			<dt><span class="keyword">rem</span> : изчислява се спрямо спрямо  <span class="note">размера на шрифта на root елемента</span> (елемента <b>html</b> за HTML езика).</dt>
+			<dt><span class="keyword">%</span> : <span class="note">Зависи от конкретното свойство!</span> За повечето свойства се изчислява като % от стойността на даденото свойство дефинирана в родителския елемент. </dt>
+			<dd>Пример за изключение: <a href="https://www.w3schools.com/cssref/pr_padding-top.asp"><code>padding-top</code></a></dd>
+		</dl>
+	</section>
+	<section><h3>Релативни (спрямо viewport)</h3>
+		<dl class="fa">
+			<dt><span class="keyword">vw</span> : 1% от широчината на изгледа (viewport width)</dt>
+			<dt><span class="keyword">vh</span> : 1% от височината на изгледа (viewport height)</dt>
+			<dt><span class="keyword">vmin:</span> : 1% от дължината на по-малката страна.</dt>
+			<dt><span class="keyword">vmax:</span> : 1% от дължината на по-голямата страна.</dt>
+		</dl>
+		<p>Viewport-a е онази част от прозореца на браузера, в която се изобразява страницата. Вертикалният и хоризонталеният скрол на странницата <span class="note">се включват</span> в рзмерите на viewport-a.</p>
+	</section>
+	<section><h3>Viewport content vs HTML element content</h3>
+		<a href="images/viewport_vs_html_content.png"><img src="images/viewport_vs_html_content.png" alt=""></a>
+	</section>
+	<section><h3>Разлика между % и viewport unit, когато има скролбар</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="VW_vs_Percentage_and_Scrolls" src="https://codepen.io/webdesigncourse/embed/NWqENEY?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/NWqENEY'>VW_vs_Percentage_and_Scrolls</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Browser compatability</h3>
+		<p>Стойностите <code><b>rem, vw, vh, vmin, vmax</b></code> са въведени от CSS3 и не биха работили под по-стари браузери.</p>
+		<p class="note"><a href="https://caniuse.com/#search=Viewport%20units">Can I use Viewport units?</a></p>
+	</section>
+</section>
+<section><h2>Полезни статии</h2>
+	<dl class="fa">
+		<dt><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units @MDN Guides</a></dt>
+		<!-- <dt><a href="https://24ways.org/2006/compose-to-a-vertical-rhythm">Compose to a Vertical Rhythm</a> by Richard Rutter</dt> -->
+		<dt><a class="advanced" href="https://www.w3.org/WAI/GL/css2em.htm">The amazing em unit and other best practices</a></dt>
+		<dt><a class="advanced" href="https://chromatichq.com/blog/understanding-and-using-hsl-your-css">Understanding and Using HSL in Your CSS</a></dt>
+	</dl>
+</section>
+
+
+<section><h1>CSS Селектори</h1><h1>Част 1</h1></section>
+<section><h2>Какво са CSS селекторите?</h2>
+	<section>
+		<dl class="fa">
+			<dt>Шаблони, които определят над кои HTML елементи ще се приложи зададеният стил в декларациите.</dt>
+			<dt>Могат да бъдат съвсем прости, като '<code>*</code>' или '<code>p</code>' или доста по-сложни като:
+			<pre><code>a[href^="https://"]:hover</code></pre></dt>
+		</dl>
+		<p class="advanced text_left">Списък със всички дефинирани в стандарта (CSS1 – CSS3) селектори: <a href="http://www.w3schools.com/cssref/css_selectors.asp">css_selectors</a></p>
+		<p>В момента (2016) се разработва спецификацията<br><a href="https://drafts.csswg.org/selectors-4/#subject">CSS Selectors Level 4</a></p>
+	</section>
+</section>
+<section><h2>Селектори за елементи</h2>
+	<section class="text_left"><h3>Element (type) selectors</h3>
+		<pre><code rel="CSS">
+			/* Всички параграфи в документа ще бъдат с червен шрифт */
+			p {
+				color: red;
+			}
+		</code></pre>
+		<p><u>Действие</u>: селектира всички HTML елементи от дадения тип.</p>
+		<p><a href="slides_examples/type_selectors_example/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
+	</section>
+	<section><h3>Универсален селектор (Universal selector)</h3>
+		<pre><code rel="CSS">
+			* {
+				marging: 0;
+				padding: 0
+			}
+		</code></pre>
+		<p><u>Действие</u>: селектира всички HTML елементи в документа.</p>
+		<p class="note">Не се препоръчва да се използва, тъй като забавя обработката на страницата.</p>
+	</section>
+	<section><h3>Универсален селектор - пример</h3>
+		<pre><code rel="HTML" class="html">
+			&lt;body&gt;
+				&lt;h1&gt;Heading 1&lt;/h1&gt;
+				&lt;section&gt;&lt;h2&gt;Section 1 Heading&lt;/h2&gt;
+					&lt;p&gt;Paragraph 1&lt;/p&gt;
+					&lt;p&gt;Paragraph 2&lt;/p&gt;
+				&lt;/section&gt;
+			&lt;/body&gt;
+		</code></pre>
+	</section>
+</section>
+<section><h2>Селектори за class и id</h2>
+	<section><h3>Атрибутите: class и id</h3>
+		<dl class="fa">
+			<dt><span class="code note">class</span> - можем да зададем един и същи клас на <span class="note">множество</span> елементи в HTML. Така лесно можем да селектираме всички тях.</dt>
+			<dt><span class="code note  ">id</span> - само <span class="note">един</span> елемент в документа може да има дадено id. T.e. чрез <span class="code">id</span> селектираме само един елемент.</dt>
+		</dl>
+		<pre><code rel="HTML">
+			<p class="odd">Параграф 1</p>
+			<p class="even" id="vip">Параграф 2</p>
+			<p class="odd">Параграф 3</p>
+			<p class="even">Параграф 4</p>
+			<p class="odd">Параграф 5</p>
+		</code></pre>
+	</section>
+	<section><h3>Атрибутите: class и id</h3>
+		<dl class="fa">
+			<dt>Стойностите на атрибутите <b>class</b> и <b>id</b>, задължително започват с буква, след която може да има произволна съвкупност от букви, цифри, '_' и '-'.</dt>
+			<dt>Можем да зададем <span class="note">няколко класа</span> за един елемент, като ги разделяме със <span class="note">спейс</span>.</dt>
+			<pre><code rel="HTML" style="width: 105%; margin-left: -2em;">
+				<!--Параграфът ще принадлежи към 2 класа: 'odd' и 'red'-->
+				<p class="odd red">Параграф 3</p>
+			</code></pre>
+			<dt><span class="note">В атрибута <b>id</b> не можем да имаме спейс!</span></dt>
+		</dl>
+	</section>
+	<section><h3>Селектор за class</h3>
+		<dl class="fa" style="font-size: .9em">
+			<dt>Записва се с точка ("<b>.</b>") последвана от стойност на class.</dt>
+			<dt>Може да бъде специфициран допълнително, като пред него непосредствено се запише тип на елемент.</dt>
+			<pre><code rel="CSS">
+				/* Селектира всички HTML елементи, които са дефинирали class="blue" */
+				.blue{
+					color: blue;
+				}
+				/* Селектира всички HTML елементи, от тип 'p', които са дефинирали class="red" */
+				p.red{
+					color: red;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Селектор за id</h3>
+		<dl class="fa">
+			<dt>Записва се с диез (хаш таг) - "<b>#</b>", последван от стойност на атрибута <b>id</b>.</dt>
+			<pre><code rel="CSS">
+				/* Селектира елементът с id="main_title" */
+				#main_title{
+					color: red;
+				}
+			</code></pre>
+			<dt>Тъй като с дадено <b>id</b> можем да обозначим само един единствен елемент от  цялото HTML дърво, то е безсмислен записът с тип на елемент отпред.</dt>
+			<dt> Например: <code>p#vip{...}</code> няма смисъл и не се препоръчва да се използва.</dt>
+		</dl>
+	</section>
+	<section><h3>Пример</h3>
+		<pre><code rel="CSS" style="width: 120%; height: 30vh; margin-left: -2em;">
+		/* Селектира всички HTML елементи, които са дефинирали class="c1" */
+		.c1{
+			color: purple;
+		}
+		/* Селектира всички H1 елементи, които са дефинирали class="c1" */
+		h1.c1{
+			font-style: italic;
+		}
+		/* Селектор по id */
+		#vip{
+			color: #aa3333;
+			font-size: 2em;
+			text-shadow:
+				2px 2px #a000a0,
+				2px 2px #c000c0;
+		}
+		</code></pre>
+		<pre><code rel="HTML" style="width: 120%; height: 20vh; margin-left: -2em;">
+			<p>Purple Section:</p>
+			<h1 class="c1">Заглавие</h1>
+			<p class="c1">Параграф</p>
+			<h2 class="c1">Под заглавие</h2>
+			<p class="c1">Параграф</p>
+			<p id="vip">Параграф с id="vip"</p>
+		</code></pre>
+		<a href="slides_examples/class_selectors.html">резултат</a>
+	</section>
+</section>
+<section><h2>CSS Комбинатори (<a href="https://www.w3schools.com/css/css_combinators.asp">CSS Combinators</a>)</h2>
+	<section>
+		<p>Чрез комбинаторите съставяме селектори, които отчитат позицията (контекста) на елементите в HTML дървото.</p>
+	</section>
+	<section><h3>Видове HTML възли</h3>
+		<dl class="fa">
+			<dt>Родител (Parent)</dt>
+			<dt>Дете (Child)</dt>
+			<dt>Наследници (Descendants)</dt>
+			<dt>Братя (Siblings)</dt>
+		</dl>
+	</section>
+	<!-- <section style="font-size: .7em"><h3>Видове HTML възли</h3>
+		<div class="html_block">
+			<div class="parent">
+			<p>DIV1</p>
+			<div class="parent child">
+				<p>DIV2</p>
+				<div class="child">
+					<p>DIV3</p>
+				</div>
+			</div>
+			</div>
+			<hr>
+			<ul>
+				<li>DIV3: Child of DIV2; Descendant of DIV2 and DIV1</li>
+				<li><a href="slides_examples/html_nodes_types_code_and_preview.html">Пример</a></li>
+			</ul>
+		</div>
+	</section> -->
+	<section>
+		<p>Селекторите, чрез които можем да избираме елементи според позицията им в HTML дървото се образуват чрез <span class="note">комбинатори</span>:</p>
+		<p>Комбинаторите, са символи, чрез които се задава връзка между селектори и така чрез тях се образува съставен селектор.</p>
+	</section>
+	<section>
+		<pre><code rel="Syntax">
+			selector1&lt;combinator&gt;selector2
+		</code></pre>
+		<table>
+			<tr>
+				<th>Комбинатор</th>
+				<th>Селектор</th>
+			</tr>
+			<tr>
+				<td>'&nbsp;&nbsp;' (<span class="note">спейс</span>)</td>
+				<td><a href="https://www.w3schools.com/cssref/sel_element_element.asp" title="">parentSelector &nbsp; descendantsSelector</a></td>
+			</tr>
+			<tr>
+				<td>'<span class="note">></span>'</td>
+				<td><a href="https://www.w3schools.com/cssref/sel_element_gt.asp" title="">parentSelector <span class="note">&gt;</span> childrenSelector</a></td>
+			</tr>
+			<tr>
+				<td>'<span class="note">~</span>'</td>
+				<td><a href="https://www.w3schools.com/cssref/sel_gen_sibling.asp" title="">previousSelector<span class="note">~</span>generalSiblingSelector</a></td>
+			</tr>
+			<tr>
+				<td>'<span class="note">+</span>'</td>
+				<td><a href="https://www.w3schools.com/cssref/sel_element_pluss.asp" title="">previousSelector<span class="note">+</span>adjacentSiblingSelector</a></td>
+			</tr>
+		</table>
+	</section>
+	<section><h3>Видове HTML възли и съответстващи комбинатори - Диаграма</h3>
+		<a href="images/CSS_CombinatorsDepictionInTree.png"><img src="images/CSS_CombinatorsDepictionInTree.png" style="min-height: 60vh"></a>
+	</section>
+	<section><h3>Task: Combinators</h3>
+		<p>Стилизирайте елементите както е показано, без да променяте HTML и без да гледате решението ;)</p>
+		<iframe scrolling='no' title='CSS Selectrors - Combinators (labs)' src='//codepen.io/webdesigncourse/embed/dQJzem/?height=300&theme-id=20230&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/dQJzem/'>CSS Selectrors - Combinators (labs)</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Task: Combinators </h3>
+		<p>Стилизирайте елементите както е показано, без да променяте HTML и без да гледате решението ;)</p>
+		<iframe  scrolling='no' title='Combinators Siblings - demo' src='//codepen.io/webdesigncourse/embed/XyVaxR/?height=300&theme-id=20230&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/XyVaxR/'>Combinators Siblings - demo</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Task: Combinators</h3>
+		<p>Стилизирайте елементите както е показано, без да променяте HTML и без да гледате решението ;)</p>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Task: ComplexCombinators" src="https://codepen.io/webdesigncourse/embed/GRoabPz?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/GRoabPz'>Task: ComplexCombinators</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Parent Selector?</h3>
+		<p>Поради съображения за сигурност/производителност, засега, не можем да селектираме елементи <span class="note">нагоре</span> и в <span class="note">ляво</span> по  дървото. Поради това <span class="note">няма селектор за родител/предшественик</span>.</p>
+	</section>
+	<section><h3>Parent Slector ;)</h3>
+		<p class="advanced"><a href="https://perishablepress.com/awesome-new-css3-selectors/" title="">awesome-new-css3-selectors ?</a> - ако се зачетете в това, то моля прегледайте и коментарите в темата : ))))</p>
+	</section>
+	<section><h3>Parent Slector?</h3>
+		<p class="advanced">Въпреки, че в черновата на Selectors Level 4 има специфициран <a href="https://drafts.csswg.org/selectors-4/#relational" title=""><code>:has</code> селектор</a>, то все още не е официално приет и <a href="http://caniuse.com/#search=%3Ahas" title="">не се поддържа от нито един браузер</a>.</p>
+	</section>
+	<section style="font-size: .8em"><h3>Parent Slector : )</h3>
+		<p><a href="https://www.reddit.com/r/ProgrammerHumor/comments/6qwe5o/the_real_reason_behind_the_rejection_of_css/">The real reason behind the rejection of CSS parent selector</a></p>
+		<a href="images/parent_selector.gif" title="click to see bigger image"><img src="images/parent_selector.gif" alt="parent selector" ></a>
+	</section>
+</section>
+<section><h2>Селектори за атрибути (Attribute Selectors)</h2>
+	<section><h3>Self-learning section</h3>
+		<a href="http://www.w3schools.com/css/css_attribute_selectors.asp">w3schools - CSS Attribute Selector</a>
+		<hr>
+		<p>Дават възможност да се селектират елементи с произволни атрибути и стойности за тях.</p>
+	</section>
+	<section><h3>Пример:</h3>
+	<a href="http://codepen.io/webdesigncourse/pen/pEzRQA/">Attribute selectors in codepen</a>
+	</section>
+</section>
+<section><h2>Задачи за упражнение</h2>
+	<dl class="fa">
+		<dt><a href="homeworks/AphorismsList/AphorismsList.pdf">AphorismsList</a></dt>
+	</dl>
+</section>
+
+<section><h1>CSS - The Box Model</h1></section>
+<section><h2>CSS Visual Formatting Model: the Box Model</h2>
+	<section><h3>Какво е The Box Model</h3>
+		<dl class="fa">
+			<dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formatting Model)– алгоритъма по който браузера визуализира и подрежда елементите от страницата.</dt>
+			<dt>Всеки елемент от дървото на HTML документа се интерпретира като правоъгълна кутийка.</dt>
+		</dl>
+		<p>Пример: <a href="slides_examples/src/DocumentVisualFormatingModel.html">Visual Formatting Model Simplpe Example</a></p>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Изобразяването и подреждането на елементите, най-общо зависи от:</dt>
+			<dd>Размера на кутийката, която представлява елемента.</dd>
+			<dd>Типа на елемента (inline, block)</dd>
+			<dd>Схемата за позициониране ( normal flow/ float /absolute )</dd>
+			<dd>Позицията на елементите в дървовидната структура на документа (document tree)</dd>
+			<dd>Размерът и позицията на viewport-a.</dd>
+		</dl>
+	</section>
+</section>
+<section><h2>Структура на една кутия</h2>
+	<section><h3>Фигура</h3>
+		<img src="images/TheBoxModelFigure.png">
+	</section>
+	<section><h3>Описание</h3>
+		<dl class="fa">
+			<dt><span class="i lightgreen">съдържание (content)</span> - това е съдържанието на самия елемент. Може да е текста между началния и крайния таг или друг елемент.</dt>
+			<dt><span class="i lightgreen">вътрешен отстъп (padding)</span> - това е разстоянието между "ръба" на съдържанието и вътрешната страна на рамката.</dt>
+			<dt><span class="i lightgreen">външен отстъп (margin)</span> - разстоянието от външния ръб на рамката до заобикалящите елементи. За по-кратко ще го наричаме само отстъп.</dt>
+			<dt><span class="i lightgreen">рамка (border)</span> - вътрешния й ръб съвпада с ръба на вътрешния отстъп, а от външния й ръб - започва външния отстъп.</dt>
+		</dl>
+	</section>
+</section>
+<section><h2>Как да зададем размери на кутийката?</h2>
+	<section>
+		<dl class="fa">
+			<dt>Свойства: <code class="note">width</code> и <code class="note">height</code></dt>
+			<dt>Задават широчината (width) и височината (height) на <span class="i b red">съдържанието</span> за елемент от тип блок.</dt>
+			<dt>Ако желаем в зададените размери браузера да включи вътрешния отстъп и рамката, то трябва да използваме: <code>box-sizing: border-box;</code></dt>
+			<dt>Възможни стойности за width и height:</dt>
+			<dd>Абсолютни (px, pt, cm, ...)</dd>
+			<dd>Относителни (%, em, vh, vw,...)</dd>
+			<dd>Auto (default) – браузера сам изчислява размера.</dd>
+		</dl>
+	</section>
+	<section><h2>пример</h2>
+		<iframe height='300' scrolling='no' title='jBqMzP' src='//codepen.io/webdesigncourse/embed/jBqMzP/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/jBqMzP/'>jBqMzP</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Дефинирани са и свойствата <code class="note">min-width</code>, <code class="note">max-width</code>, <code class="note">min-heigh</code> и <code class="note">max-heigth</code>, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
+			<dt>Когато са зададени едновременно width, min-width и max-width, то приоритета е: </dt>
+			<dd>1.min-width</dd>
+			<dd>2.max-width</dd>
+			<dd>3.width</dd>
+			<dt>За височината е в сила същата приоритетна схема.</dt>
+		</dl>
+	</section>
+</section>
+<section><h2>Как да зададем margin и padding?</h2>
+	<section><h4>За всяка една страна, поотделно:</h4><br>
+		<div class="text_left">
+			<dl class="fa">
+				<dt>Вътрешен отстъп (<code class="note">padding</code>):</dt>
+				<dd><code>padding­-top</code> : горен вътрешен отстъп</dd>
+				<dd><code>padding­-right</code> : десен вътрешен отстъп</dd>
+				<dd><code>padding­-bottom</code> : долен вътрешен отстъп</dd>
+				<dd><code>padding­-left</code> : ляв вътрешен отстъп</dd>
+			</dl>
+			<hr>
+			<dl class="fa">
+				<dt>Външен отстъп (<code class="note">margin</code>):</dt>
+				<dd><code>margin-top</code> : горен външен отстъп</dd>
+				<dd><code>margin-right</code> : десен външен отстъп</dd>
+				<dd><code>margin-bottom</code> : долен външен отстъп</dd>
+				<dd><code>margin-left</code> : ляв външен отстъп</dd>
+			</dl>
+		</div>
+	</section>
+	<section><h4>Често използвани обобщени записи:</h4>
+		<dl class="fa">
+			<p class="fontsize_07">Легенда: T - top, R - right, B - bottom, L - left</p>
+			<dt><code>padding: T R B L;</code></dt>
+			<dd>задава стойности за всяка една посока поотделно.</dd>
+			<dd><i>пример</i>: <code>padding: 2em 0 1.5em 1em;</code></dd>
+			<dt><code>padding: TB RL;</code></dt>
+			<dd>задава едновременно стойност за горе и долу, ляво и дясно.</dd>
+			<dd><i>пример</i>: <code>padding: 2em 1em;</code></dd>
+			<dt>padding: TBRL;</dt>
+			<dd>задава едновременно стойност за всички посоки.</dd>
+			<dd><i>пример</i>: <code>padding: 5px;</code></dd>
+		</dl>
+		<br>
+		<p class="fontsize_07"><span class="nb darkred">NB!</span> Тук са посочени само вариантите за padding. При margin записите са аналогични.</p>
+	</section>
+	<section><h3>margin:0 auto</h3>
+		<dl class="fa">
+			<dt>Ако зададем стойности:<br>
+				<code class="note">margin-left:auto</code> и <code class="note">margin-right:auto</code> <br>
+				на даден елемент, то той ще бъде хоризонтално центриран спрямо елемента, в който се намира. </dt>
+			</dl>
+		</section>
+</section>
+<section><h2>Блокови, поредови и замествани елементи</h2>
+	<section><h3>Блокови елементи</h3>
+		<dl class="fa">
+			<dt>Блоковите елементи (<span class="lightgreen">block elements</span>) генерират кутия, която се позиционира като блок - винаги започва на нов ред и заема целият ред, независимо дали съдържанието й ще запълни реда.</dt>
+			<dt>Височината на един блоков елемент се определя от съдържанието му. Т.е. елемента ще бъде толкова висок, колкото е необходимо за да обхване съдържанието.</dt>
+			<dt><span class="nb darkred">NB!</span> Блоковите елементи могат да съдържат както поредови, така и блокови елементи.</dt>
+			<dt><span class="nb darkred">NB!</span> Размера на блоковите елементи може да се контролира чрез CSS свойствата <code>width</code> и <code>height</code>.</dt>
+		</dl>
+	</section>
+	<section><h4>Блокови елементи са:</h4>
+		<code>address, article, aside, blockquote, canvas, </code>
+		<code>dd, div, dl, fieldset, figcaption, figure,</code>
+		<code>footer, form, h1, h2, h3, h4, h5, h6, header,</code>
+		<code>hgroup, hr, li, main, nav, noscript, ol, output,</code>
+		<code>p, pre, section, table, tfoot, ul, video</code>
+	</section>
+	<section><h3>Поредови елементи</h3>
+		<dl class="fa">
+			<dt>Поредовите елементи (<span class="lightgreen">inline elements</span>) генерират кутия, която се изобразява в рамките на текущия ред. Позиционират се непосредствено след предхождащият ги елемент. Заемат толкова място, колкото е необходимо за да се представи съдържанието им.</dt>
+			<dt><span class="nb darkred">NB!</span> Поредовите елементи не могат да съдържат блокови елементи.</dt>
+			<dt><span class="nb darkred">NB!</span><span class="note"> CSS свойствата <code>width</code> и <code>height</code> <b>нямат</b> влияние над тях.</span></dt>
+		</dl>
+	</section>
+	<section><h4>Поредови елементи са:</h4><br>
+		<code>b, big, i, small, tt,</code>
+		<code>abbr, acronym, cite, code, dfn, em, kbd,</code>
+		<code>strong, samp, time, var,</code>
+		<code>a, br, img, map, object, q, script, span, sub, sup,</code>
+		<code>button, input, label, select, textarea</code>
+	</section>
+	<section id="replacedElements"><h3>Замествани елементи</h3>
+		<dl class="fa">
+			<dt>Заместваните елементи (<span class="lightgreen">replaced elements</span>) представят външни обекти (изображение, видео и пр.) чието изобразяване е независимо от CSS. </dt>
+			<dt>Такива са елементите: </dt>
+			<code>img, objec, video, textarea, input, button, select и др.</code>
+			<dt><span class="nb">NB!</span> Чрез CSS можем да контролираме <span class="note">само някои</span> аспекти на заместваните елементи.</dt>
+		</dl>
+	</section>
+	<section>
+		<p>Повече за CSS box model при поредови елементи:</p>
+		<dl class="fa">
+			<dt><a href="https://hacks.mozilla.org/2015/03/understanding-inline-box-model/">Understanding the CSS box model for inline elements @MDN Hacks</a></dt>
+		</dl>
+	</section>
+</section>
+<section><h2>Групиране на HTML елементи</h2>
+	<section><h3><code>div</code> и <code>span</code></h3>
+		<p>Чрез елемента <code class="lightgreen">div</code> можем да групираме елементи (блокови и/или поредови) в блок.</p>
+		<p>Чрез елемента <code class="lightgreen">span</code> можем да групирам единствено поредови елементи и/или текст.</p>
+		<p><span class="nb darkred">NB!</span> Тези елементи не носят семантичен смисъл и се използват единствено като контейнер за други елементи.</p>
+	</section>
+</section>
+
+<section><h3>Повече примери за CSS box model в codepen</h3>
+	<a href="https://codepen.io/collection/DJKpmB/">CSS_Box_Model Collection @webdesigncourse</a>
+</section>
+
+
+
+
+<section class="disclaimer" data-background="../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	<p>These slides are based on</p>
+	<p>customised version of </p>
+	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	<p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+	   </div>
+   </div>
+   <!-- Custom processing -->
+   <script src="../../../outfit/js/slides.js"></script>
+   <!-- external scripts -->
+
+   <script src="../../../lib/reveal.js/js/reveal.js"></script>
+   <!-- init reveal -->
+   <script>
+	   // Full list of configuration options available at:
+	   // https://github.com/hakimel/reveal.js#configuration
+	   var highlightjsTabSize = '  ';
+	   Reveal.initialize({
+		   controls: true,
+		   progress: true,
+		   slideNumber: 'c/t',
+		   keyboard: true,
+		   history: true,
+		   center: true,
+		   // width: '100%',
+		   // height: '100%',
+		   // slide transition
+		   transition: 'concave', // none/fade/slide/convex/concave/zoom
+		   // Factor of the display size that should remain empty around the content
+		   margin: 0.1,
+		   // shift+maous click to zoom in/out element
+		   zoomKey: 'ctrl',
+		   // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		   // transition: Reveal.getQueryHash().transition || 'default'
+		   // Optional reveal.js plugins
+		   dependencies: [
+			   { src: '../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			   { src: '../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			   { src: '../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			   { src: '../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+			   { src: '../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+			   { src: '../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+		   ]
+	   });
+   </script>
+   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>
