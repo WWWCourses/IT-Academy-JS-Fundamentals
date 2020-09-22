@@ -1,8 +1,11 @@
-// декларираме променливите x и y
-let x;
-let y;
+let a=b=c=1;
 
-// присвояваме и на двете стойността 1
-y = x = 1;
-console.log(`x = ${x}`);
-console.log(`y = ${y}`);
+// no ASI here:
+a=b
++c
+console.log(`a: ${a}`);
+
+// set ; manually:
+a=b;
++c
+console.log(`a: ${a}`);

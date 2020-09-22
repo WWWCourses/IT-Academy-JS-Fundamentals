@@ -166,7 +166,7 @@
 			let y = 2;
 			let z;
 		</code></pre>
-		<a href="images/variables_in_RAM.png" title="click for bigger image"><img src="images/variables_in_RAM.png" alt="variables_in_RAM" style="height: 80vh"></a>
+		<a href="images/variables_in_RAM.png" title="click for bigger image"><img src="images/variables_in_RAM.png" alt="variables_in_RAM"></a>
 	</section>
 	<section style="font-size: .9em"><h3>Деклариране/Дефиниране</h3>
 		<dl class="fa">
@@ -191,7 +191,7 @@
 			x = 10; // (Error in strict mode)
 			console.log(x);
 		</code></pre>
-		<p class="note">Това се счита за изключително лоша практика, тъй като се създава "<strong>глобална променлива</strong>" (в темата за <a href="../../../pages/themes/beginners/JS_Functions/JS_Functions.html#Scope">scope</a>, ще разгледаме защо), и в новите версии на езика (от ЕС5.1) при използването на strict mode, това би <strong>довело до грешка</strong>!</p>
+		<p class="note">Това се счита за изключително лоша практика, тъй като се създава "<strong>глобална променлива</strong>" (в темата за <a href="../../../pages/themes/JS_Functions/JS_Functions.html#Scope">scope</a>, ще разгледаме защо), и в новите версии на езика (от ЕС5.1) при използването на strict mode, това би <strong>довело до грешка</strong>!</p>
 	</section>
 	<section><h3 class="advanced">Strict Mode</h3>
 		<pre><code rel="JS" class="js">
@@ -947,10 +947,7 @@
 				block
 			}
 		</code></pre>
-		<img src="images/for_algorithm.png">
-	</section>
-	<section><h3><code>for</code> Statement: пример и program flow diagram</h3>
-		<a href="images/JS_Loops.png"><img src="images/JS_Loops.png"></a>
+		<img src="images/for_algorithm.png" style="width: 50%;">
 	</section>
 	<section><h3><code>for</code> Statement: синтаксис</h3>
 		<pre style="width: 70vw;"><code rel="Syntax">
@@ -961,16 +958,20 @@
 		</code></pre>
 		<p>Стъпките, в един цикъл са:</p>
 		<dl class="fa">
-			<dt>1. init: изпълнява се първа и само веднъж</dt>
+			<dt>1. init: изпълнява се в началото, само веднъж</dt>
 			<dt>2. condition:</dt>
 				<dd>ако е истина => изпълнява се блока</dd>
 				<dd>ако е лъжа => излиза се от цикъла</dd>
-			<dt>3. increment: изпълнява се след блока. Обикновено тук се променят променливите, които контролират цикъла.</dt>
+			<dt>3. increment: изпълнява се след блока. Обикновено тук се променят променливите, които контролират цикъла. След increment се изпълнява стъпка 2. condition</dt>
 		</dl>
 	</section>
+	<section><h3><code>for</code> Statement: пример и program flow diagram</h3>
+		<a href="images/JS_Loops.png"><img src="images/JS_Loops.png"></a>
+	</section>
+
 	<section><h3><code>for</code> Statement: пример 1</h3>
 		<pre><code rel="JS">
-			for (var i = 0; i < 5; i++) {
+			for (let i = 0; i < 5; i++) {
 				console.log("i=" + i);
 			}
 		</code></pre>
@@ -986,7 +987,7 @@
 	<section><h3><code>for</code> Statement: пример 2</h3>
 		<pre><code rel="JS">
 			// i е четно число, в интервала [0-10]
-			for (var i = 2; i <= 10; i = i+2){
+			for (let i = 2; i <= 10; i = i+2){
 				console.log("i=", i);
 			}
 		</code></pre>
@@ -1002,11 +1003,11 @@
 	<section><h3><code>for</code> Statement: пример 3</h3>
 		<pre><code rel="JS">
 			// create the list element
-			var listNode = document.createElement(listType);
+			let listNode = document.createElement(listType);
 
 			//create list items
-			for (var i = 1; i <= listItemsCount; i++){
-				var listItem = document.createElement('li');
+			for (let i = 1; i <= listItemsCount; i++){
+				let listItem = document.createElement('li');
 				listItem.innerHTML = 'Item '+ i;
 				listNode.appendChild(listItem);
 			}
@@ -1019,8 +1020,8 @@
 	<section><h3><code>for</code> Statement: пример 4</h3>
 		<pre><code rel="JS">
 			// half tree print
-			var treeDeep = 5;
-			for (var i = 1; i <= treeDeep; i++) {
+			let treeDeep = 5;
+			for (let i = 1; i <= treeDeep; i++) {
 				console.log("*".repeat(i));
 			}
 		</code></pre>
@@ -1038,20 +1039,20 @@
 		<p><a href="https://codepen.io/webdesigncourse/pen/veMXKd">play with it on codepen</a></p>
 		<pre><code rel="JS">
 			// full tree print
-			var crownHeight = 6;
-			var boleHeight = 2;
-			var boleWidth = 3;
-			var spaceCount;
+			let crownHeight = 6;
+			let boleHeight = 2;
+			let boleWidth = 3;
+			let spaceCount;
 
 			// print the crown:
-			for (var i = 1; i <= crownHeight; i++) {
+			for (let i = 1; i <= crownHeight; i++) {
 				spaceCount = Math.floor(crownHeight) - i;
 				console.log(" ".repeat(spaceCount) + "*".repeat(i * 2 - 1));
 			}
 
 			// print the bole:
 			spaceCount = Math.floor((crownHeight * 2 - 1 - boleWidth) / 2);
-			for (var i = 1; i <= boleHeight; i++) {
+			for (let i = 1; i <= boleHeight; i++) {
 				console.log(" ".repeat(spaceCount) + "*".repeat(boleWidth));
 			}
 		</code></pre>
@@ -1179,7 +1180,7 @@
 	</section>
 </section>
 
-<section id="HW"><h1>Задачи за упражнение</h1>
+<section id="HW"><h1>Задачи за упражнение</h1></section>
 <section><h2>Задачи за упражнение</h2>
 	<section id="HW1"><h3>HW1: Increment and Comparison Operators</h3>
 		<dl class="fa">
@@ -1193,8 +1194,8 @@
 	</section>
 	<section id="HW2"><h3>HW2: Comparison Operators & Conditional Statement</h3>
 		<dl class="fa">
-			<dt>Описанието на задачите е дадено като коментар в съответните HTML и JS полета.</dt>
-			<dt>Работете върху дадения код като добавите код, където е необходимо и изпратете линк на вашия Пен.</p>
+			<dt>Описанието на задачите е дадено като коментар в JS полета.</dt>
+			<dt>Работете върху дадения код като добавите код, където е необходимо (маркирано с <code style="font-size:.8em">// --&gt; YOUR CODE HERE&lt;--</code>) и изпратете линк на вашия Пен.</p>
 		</dl>
 		<iframe height='300' scrolling='no' title='HW2: Comparison Operators & Conditional Statement' src='//codepen.io/webdesigncourse/embed/BLYJGJ/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/BLYJGJ/'>HW2: Comparison Operators & Conditional Statement</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 	</section>
@@ -1265,11 +1266,11 @@
 			keyboard: true,
 			history: true,
 			center: true,
-			width: 1280,
-			height: 1024,
+			// width: 1280,
+			// height: 1024,
 			// Bounds for smallest/largest possible scale to apply to content
 			// minScale: .5,
-			maxScale: 1,
+			// maxScale: 1,
 			// slide transition
 			transition: 'concave', // none/fade/slide/convex/concave/zoom
 			// Factor of the display size that should remain empty around the content
